@@ -1,1 +1,4 @@
-run
+#!/usr/bin/env bash
+
+echo "Running..."
+.build/debug/SwiftGGAppServer

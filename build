@@ -1,15 +1,13 @@
 #!/usr/bin/env bash
 
-set -e
-set -o pipefail
-
 echo "Downloading dependencies..."
 swift build --fetch
+
 echo "Fixing SPM bug..."
 rm -rf Packages/*/Tests
+echo -e '\n' >> $PWD/Packages/MySQL-0.1.12/Package.swift
+echo 'let lib = Product(name: "MySQL", type: .Library(.Dynamic), modules: "MySQL"); products.append(lib)' >> $PWD/Packages/MySQL-0.1.12/Package.swift
+
 echo "Building..."
-swift build -Xlinker -L/usr/local/lib -Xcc -I/usr/local/include/mysql
 
-/Library/Developer/Toolchains/swift-latest.xctoolchain/usr/bin/swift build --chdir "$SRCROOT" -Xlinker -L/usr/local/lib -Xcc -I/usr/local/include/mysql
-
-i386 x86_64
+swift build -Xlinker -L/usr/local/lib -Xcc -I/usr/local/include/mysql -v
