@@ -1,6 +1,7 @@
 # Swift.GGAppServer
+`The server side of offical Swift.GG Application, written in Swift.`
 
-The server side of offical Swift.GG Application, written in Swift.
+------------------------------------------------------------------------
 
 Current the swift version we use is `DEVELOPMENT-SNAPSHOT-2016-03-01-a`, it has already defined at `.swift-version` file in the source folder.
 
