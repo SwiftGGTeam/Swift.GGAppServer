@@ -13,34 +13,8 @@
 		DD8D978F1C992ED800A2CF69 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8D97891C992ED800A2CF69 /* UserController.swift */; };
 		DD8D97901C992ED800A2CF69 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8D978A1C992ED800A2CF69 /* main.swift */; };
 		DD8D97911C992ED800A2CF69 /* LogMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8D978C1C992ED800A2CF69 /* LogMiddleware.swift */; };
-		DD8D97931C9932DB00A2CF69 /* MySQL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD8D97921C9932DB00A2CF69 /* MySQL.framework */; };
-		DD8D97951C99385500A2CF69 /* libmysqlclient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DD8D97941C99385500A2CF69 /* libmysqlclient.a */; };
-		DD8D97971C9938FE00A2CF69 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DD8D97961C9938FE00A2CF69 /* libstdc++.tbd */; };
-		DD8D979C1C99398F00A2CF69 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DD8D979A1C99398F00A2CF69 /* libcrypto.a */; };
-		DD8D979D1C99398F00A2CF69 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DD8D979B1C99398F00A2CF69 /* libssl.a */; };
-		DD8D979E1C99399F00A2CF69 /* libcrypto.a in CopyFiles */ = {isa = PBXBuildFile; fileRef = DD8D979A1C99398F00A2CF69 /* libcrypto.a */; };
-		DD8D979F1C99399F00A2CF69 /* libssl.a in CopyFiles */ = {isa = PBXBuildFile; fileRef = DD8D979B1C99398F00A2CF69 /* libssl.a */; };
-		DD8D97A01C99399F00A2CF69 /* libmysqlclient.a in CopyFiles */ = {isa = PBXBuildFile; fileRef = DD8D97941C99385500A2CF69 /* libmysqlclient.a */; };
-		DD8D97A21C99430D00A2CF69 /* libmysqlclient.20.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DD8D97A11C99430D00A2CF69 /* libmysqlclient.20.dylib */; };
-		DD8D97A41C99484C00A2CF69 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DD8D97A31C99484C00A2CF69 /* libc++.tbd */; };
-		DD8D97AC1C994CCE00A2CF69 /* MySQL.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = DD8D97AB1C994CCE00A2CF69 /* MySQL.framework.dSYM */; };
+		DDD4E1601C99698200FEE50A /* libMySQL.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DDD4E15F1C99698200FEE50A /* libMySQL.dylib */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		DD4F24211C97AADF00A4B76B /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 12;
-			dstPath = "";
-			dstSubfolderSpec = 16;
-			files = (
-				DD8D97AC1C994CCE00A2CF69 /* MySQL.framework.dSYM in CopyFiles */,
-				DD8D979E1C99399F00A2CF69 /* libcrypto.a in CopyFiles */,
-				DD8D979F1C99399F00A2CF69 /* libssl.a in CopyFiles */,
-				DD8D97A01C99399F00A2CF69 /* libmysqlclient.a in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		DD14B0401C97AD540013725D /* libVapor.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libVapor.dylib; path = ../.build/debug/libVapor.dylib; sourceTree = "<group>"; };
@@ -51,14 +25,7 @@
 		DD8D97891C992ED800A2CF69 /* UserController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
 		DD8D978A1C992ED800A2CF69 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		DD8D978C1C992ED800A2CF69 /* LogMiddleware.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogMiddleware.swift; sourceTree = "<group>"; };
-		DD8D97921C9932DB00A2CF69 /* MySQL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MySQL.framework; path = Carthage/Build/Mac/MySQL.framework; sourceTree = "<group>"; };
-		DD8D97941C99385500A2CF69 /* libmysqlclient.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmysqlclient.a; path = /usr/local/Cellar/mysql/5.7.11/lib/libmysqlclient.a; sourceTree = "<absolute>"; };
-		DD8D97961C9938FE00A2CF69 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
-		DD8D979A1C99398F00A2CF69 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = /usr/local/Cellar/openssl/1.0.2g/lib/libcrypto.a; sourceTree = "<absolute>"; };
-		DD8D979B1C99398F00A2CF69 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = /usr/local/Cellar/openssl/1.0.2g/lib/libssl.a; sourceTree = "<absolute>"; };
-		DD8D97A11C99430D00A2CF69 /* libmysqlclient.20.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libmysqlclient.20.dylib; path = /usr/local/Cellar/mysql/5.7.11/lib/libmysqlclient.20.dylib; sourceTree = "<absolute>"; };
-		DD8D97A31C99484C00A2CF69 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
-		DD8D97AB1C994CCE00A2CF69 /* MySQL.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = MySQL.framework.dSYM; path = Carthage/Build/Mac/MySQL.framework.dSYM; sourceTree = "<group>"; };
+		DDD4E15F1C99698200FEE50A /* libMySQL.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libMySQL.dylib; path = ../.build/debug/libMySQL.dylib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,14 +33,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD8D97A41C99484C00A2CF69 /* libc++.tbd in Frameworks */,
-				DD8D97A21C99430D00A2CF69 /* libmysqlclient.20.dylib in Frameworks */,
-				DD8D979C1C99398F00A2CF69 /* libcrypto.a in Frameworks */,
-				DD8D979D1C99398F00A2CF69 /* libssl.a in Frameworks */,
-				DD8D97971C9938FE00A2CF69 /* libstdc++.tbd in Frameworks */,
-				DD8D97951C99385500A2CF69 /* libmysqlclient.a in Frameworks */,
+				DDD4E1601C99698200FEE50A /* libMySQL.dylib in Frameworks */,
 				DD14B0481C97B2C90013725D /* libVapor.dylib in Frameworks */,
-				DD8D97931C9932DB00A2CF69 /* MySQL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,13 +44,7 @@
 		DD14B0471C97B16B0013725D /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
-				DD8D97A31C99484C00A2CF69 /* libc++.tbd */,
-				DD8D97A11C99430D00A2CF69 /* libmysqlclient.20.dylib */,
-				DD8D979A1C99398F00A2CF69 /* libcrypto.a */,
-				DD8D979B1C99398F00A2CF69 /* libssl.a */,
-				DD8D97961C9938FE00A2CF69 /* libstdc++.tbd */,
-				DD8D97941C99385500A2CF69 /* libmysqlclient.a */,
-				DD8D97921C9932DB00A2CF69 /* MySQL.framework */,
+				DDD4E15F1C99698200FEE50A /* libMySQL.dylib */,
 				DD14B0401C97AD540013725D /* libVapor.dylib */,
 			);
 			name = Dependencies;
@@ -98,7 +53,6 @@
 		DD4F241A1C97AADF00A4B76B = {
 			isa = PBXGroup;
 			children = (
-				DD8D97AB1C994CCE00A2CF69 /* MySQL.framework.dSYM */,
 				DD14B0441C97B15C0013725D /* Package.swift */,
 				DD8D97851C992ED800A2CF69 /* SwiftGGAppServer */,
 				DD14B0471C97B16B0013725D /* Dependencies */,
@@ -150,7 +104,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DD4F242A1C97AADF00A4B76B /* Build configuration list for PBXNativeTarget "SwiftGGAppServer" */;
 			buildPhases = (
-				DD4F24211C97AADF00A4B76B /* CopyFiles */,
 				DD4F241F1C97AADF00A4B76B /* Sources */,
 				DD4F24201C97AADF00A4B76B /* Frameworks */,
 			);
@@ -297,19 +250,13 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ENABLE_MODULES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/Carthage/Build/Mac",
-				);
-				HEADER_SEARCH_PATHS = "/usr/local/include/**";
+				FRAMEWORK_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = "";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(SRCROOT)/../.build/debug",
-					/usr/local/lib,
-				);
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/../.build/debug";
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/../.build/debug \"$(SRCROOT)/SwiftGGAppServer/External\"";
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/../.build/debug $(SRCROOT)/SwiftGGAppServer/External";
 				SWIFT_OBJC_BRIDGING_HEADER = "SwiftGGAppServer/SwiftGGAppServer-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				VALID_ARCHS = "i386 x86_64";
@@ -322,19 +269,13 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ENABLE_MODULES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/Carthage/Build/Mac",
-				);
-				HEADER_SEARCH_PATHS = "/usr/local/include/**";
+				FRAMEWORK_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = "";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(SRCROOT)/../.build/debug",
-					/usr/local/lib,
-				);
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/../.build/debug";
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/../.build/debug \"$(SRCROOT)/SwiftGGAppServer/External\"";
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/../.build/debug $(SRCROOT)/SwiftGGAppServer/External";
 				SWIFT_OBJC_BRIDGING_HEADER = "SwiftGGAppServer/SwiftGGAppServer-Bridging-Header.h";
 				VALID_ARCHS = "i386 x86_64";
 			};
