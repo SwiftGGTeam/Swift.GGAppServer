@@ -76,5 +76,5 @@ In the source folder, we write some shell script to help `build`, `clean`, `run`
 
 ## TODO
 
-- [](UserController feature)
-- [](make a new Xcode Cocoa Application, Support using the GUI to run the server on osx)
+- [] UserController feature
+- [] make a new Xcode Cocoa Application, Support using the GUI to run the server on osx
