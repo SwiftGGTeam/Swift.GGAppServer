@@ -29,12 +29,13 @@ class UserController : Controller {
     }
     
     func registerV1(request: Request) throws -> ResponseConvertible {
-
-        let result = try pool.execute { conn in
-            try conn.query("select * from sg_user")
+        
+        let (rows, status): ([User], QueryStatus) = try pool.execute { conn in
+            try conn.query("SELECT id,account,password,nickname FROM users")
         }
         
-        print(result)
+        print(status)
+        print(rows)
         
         return try Json(["lub": "dub"])
     }

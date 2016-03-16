@@ -16,7 +16,7 @@ app.get("/") { request in
 
 app.post("/v1/user/otherLogin", handler: UserController().otherLoginV1)
 
-app.post("/v1/user/userRegister", handler: UserController().registerV1)
+app.any("/v1/user/userRegister", handler: UserController().registerV1)
 
 app.post("/v1/user/getInfo", handler: UserController().getInfoV1)
 

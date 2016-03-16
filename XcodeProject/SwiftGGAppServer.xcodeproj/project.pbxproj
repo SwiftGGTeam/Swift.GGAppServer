@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DD14B0481C97B2C90013725D /* libVapor.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DD14B0401C97AD540013725D /* libVapor.dylib */; };
+		DD82AB4E1C9973DE004C30C8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD82AB4D1C9973DE004C30C8 /* User.swift */; };
 		DD8D978D1C992ED800A2CF69 /* ArticleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8D97871C992ED800A2CF69 /* ArticleController.swift */; };
 		DD8D978E1C992ED800A2CF69 /* CatchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8D97881C992ED800A2CF69 /* CatchController.swift */; };
 		DD8D978F1C992ED800A2CF69 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8D97891C992ED800A2CF69 /* UserController.swift */; };
@@ -20,6 +21,7 @@
 		DD14B0401C97AD540013725D /* libVapor.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libVapor.dylib; path = ../.build/debug/libVapor.dylib; sourceTree = "<group>"; };
 		DD14B0441C97B15C0013725D /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Package.swift; path = ../Package.swift; sourceTree = "<group>"; };
 		DD4F24231C97AADF00A4B76B /* SwiftGGAppServer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SwiftGGAppServer; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD82AB4D1C9973DE004C30C8 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		DD8D97871C992ED800A2CF69 /* ArticleController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleController.swift; sourceTree = "<group>"; };
 		DD8D97881C992ED800A2CF69 /* CatchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatchController.swift; sourceTree = "<group>"; };
 		DD8D97891C992ED800A2CF69 /* UserController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
@@ -68,12 +70,21 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		DD82AB4C1C9973DE004C30C8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DD82AB4D1C9973DE004C30C8 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		DD8D97851C992ED800A2CF69 /* SwiftGGAppServer */ = {
 			isa = PBXGroup;
 			children = (
 				DD8D978A1C992ED800A2CF69 /* main.swift */,
 				DD8D97861C992ED800A2CF69 /* Controllers */,
 				DD8D978B1C992ED800A2CF69 /* Middleware */,
+				DD82AB4C1C9973DE004C30C8 /* Models */,
 			);
 			name = SwiftGGAppServer;
 			path = ../Sources/SwiftGGAppServer;
@@ -155,6 +166,7 @@
 			files = (
 				DD8D978F1C992ED800A2CF69 /* UserController.swift in Sources */,
 				DD8D978D1C992ED800A2CF69 /* ArticleController.swift in Sources */,
+				DD82AB4E1C9973DE004C30C8 /* User.swift in Sources */,
 				DD8D97901C992ED800A2CF69 /* main.swift in Sources */,
 				DD8D978E1C992ED800A2CF69 /* CatchController.swift in Sources */,
 				DD8D97911C992ED800A2CF69 /* LogMiddleware.swift in Sources */,
