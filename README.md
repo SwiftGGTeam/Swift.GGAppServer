@@ -1,8 +1,11 @@
 # Swift.GGAppServer
 
-The server side of offical Swift.GG Application, written in Swift, current the version is `DEVELOPMENT-SNAPSHOT-2016-03-01-a`.
+The server side of offical Swift.GG Application, written in Swift.
 
-This project support run in teminal or Xcode, before running, you muse install and config something.
+Current the swift version we use is `DEVELOPMENT-SNAPSHOT-2016-03-01-a`, it has already defined at `.swift-version` file in the source folder.
+
+This project support running in teminal or Xcode, before running, you must install and config.
+
 Sometime the config in OSX and Linux are a bit different, so we will **Seperate** them.
 
 ## OSX
@@ -52,4 +55,4 @@ Next, see the source code, you will find a folder named **XcodeProject**, go in 
 
 ## CLI
 
-In the source folder, we write some shell script to help `build`, `clean`, `run`, `release` our SwiftGGAppServer.
+In the source folder, we write some shell script to help `build`, `clean`, `run`, `release` our **SwiftGGAppServer**.
