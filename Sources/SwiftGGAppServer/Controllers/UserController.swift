@@ -7,14 +7,35 @@
 //
 
 import Vapor
+import MySQL
 
 class UserController : Controller {
+
+    struct Options: ConnectionOption {
+        let host: String
+        let port: Int
+        let user: String
+        let password: String
+        let database: String
+    }
+
+    private let pool:ConnectionPool = {
+        let options = Options(host: "123.57.250.194", port: 3306, user: "swiftggapp", password: "SwiftGG123", database: "swiftggapp")
+        return ConnectionPool(options: options)
+    }()
     
     required init() {
         
     }
     
     func registerV1(request: Request) throws -> ResponseConvertible {
+
+        let result = try pool.execute { conn in
+            try conn.query("select * from sg_user")
+        }
+        
+        print(result)
+        
         return try Json(["lub": "dub"])
     }
     

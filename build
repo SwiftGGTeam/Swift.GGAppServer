@@ -8,4 +8,8 @@ swift build --fetch
 echo "Fixing SPM bug..."
 rm -rf Packages/*/Tests
 echo "Building..."
-swift build
+swift build -Xlinker -L/usr/local/lib -Xcc -I/usr/local/include/mysql
+
+/Library/Developer/Toolchains/swift-latest.xctoolchain/usr/bin/swift build --chdir "$SRCROOT" -Xlinker -L/usr/local/lib -Xcc -I/usr/local/include/mysql
+
+i386 x86_64
