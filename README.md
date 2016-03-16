@@ -2,7 +2,10 @@
 
 The server side of offical Swift.GG Application, written in Swift.
 
-<img src="./logo_new.png" width ="180" alt="Logo" align=center />
+<center>
+  <img src="./logo_new.png" width ="180" alt="Logo"/>
+</center>
+
 
 ## Intro
 
