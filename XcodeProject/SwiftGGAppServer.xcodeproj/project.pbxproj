@@ -83,8 +83,8 @@
 		DD8D97851C992ED800A2CF69 /* SwiftGGAppServer */ = {
 			isa = PBXGroup;
 			children = (
-				DD8D97861C992ED800A2CF69 /* Controllers */,
 				DD8D978A1C992ED800A2CF69 /* main.swift */,
+				DD8D97861C992ED800A2CF69 /* Controllers */,
 				DD8D978B1C992ED800A2CF69 /* Middleware */,
 			);
 			name = SwiftGGAppServer;
