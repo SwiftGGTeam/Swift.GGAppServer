@@ -1,7 +1,8 @@
 # Swift.GGAppServer
 
 The server side of offical Swift.GG Application, written in Swift.
-![Logo](./logo_new.png =100x)
+
+<img src="./logo_new.png" width ="180" alt="Logo" align=center />
 
 ## Intro
 
