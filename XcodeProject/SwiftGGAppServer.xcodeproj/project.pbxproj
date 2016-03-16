@@ -115,6 +115,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DD4F242A1C97AADF00A4B76B /* Build configuration list for PBXNativeTarget "SwiftGGAppServer" */;
 			buildPhases = (
+				DD4D26D61C9A24A500CCAB09 /* Swift Build Dependencies */,
 				DD4F241F1C97AADF00A4B76B /* Sources */,
 				DD4F24201C97AADF00A4B76B /* Frameworks */,
 			);
@@ -158,6 +159,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DD4D26D61C9A24A500CCAB09 /* Swift Build Dependencies */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Swift Build Dependencies";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/Library/Developer/Toolchains/swift-latest.xctoolchain/usr/bin/swift build -Xlinker -L/usr/local/lib -Xcc -I/usr/local/include/mysql -v --chdir \"$SRCROOT\"";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DD4F241F1C97AADF00A4B76B /* Sources */ = {
