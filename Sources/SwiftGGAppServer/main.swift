@@ -28,4 +28,3 @@ app.post("/v1/catch/newArticle", handler: CatchController().addNewArticle)
 
 
 app.start(port: 4000)
-

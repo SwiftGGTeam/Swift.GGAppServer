@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		DD14B03E1C97AC060013725D /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD14B03D1C97AC060013725D /* main.swift */; };
 		DD14B0481C97B2C90013725D /* libVapor.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DD14B0401C97AD540013725D /* libVapor.dylib */; };
+		DD3453F01C97F43900B8E1B9 /* libmysqlclient.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DD3453EF1C97F43900B8E1B9 /* libmysqlclient.dylib */; };
 		DD92D6B31C97C33C005F7B38 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD92D6B21C97C33C005F7B38 /* UserController.swift */; };
 		DD92D6B51C97C42D005F7B38 /* LogMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD92D6B41C97C42D005F7B38 /* LogMiddleware.swift */; };
 		DD92D6B71C97C5B8005F7B38 /* ArticleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD92D6B61C97C5B8005F7B38 /* ArticleController.swift */; };
@@ -31,6 +32,7 @@
 		DD14B03D1C97AC060013725D /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = main.swift; path = ../../Sources/main.swift; sourceTree = "<group>"; };
 		DD14B0401C97AD540013725D /* libVapor.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libVapor.dylib; path = ../.build/debug/libVapor.dylib; sourceTree = "<group>"; };
 		DD14B0441C97B15C0013725D /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Package.swift; path = ../Package.swift; sourceTree = "<group>"; };
+		DD3453EF1C97F43900B8E1B9 /* libmysqlclient.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libmysqlclient.dylib; path = /usr/local/lib/libmysqlclient.dylib; sourceTree = "<absolute>"; };
 		DD4F24231C97AADF00A4B76B /* SwiftGGAppServer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SwiftGGAppServer; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD92D6B21C97C33C005F7B38 /* UserController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
 		DD92D6B41C97C42D005F7B38 /* LogMiddleware.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogMiddleware.swift; sourceTree = "<group>"; };
@@ -44,6 +46,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD14B0481C97B2C90013725D /* libVapor.dylib in Frameworks */,
+				DD3453F01C97F43900B8E1B9 /* libmysqlclient.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +56,7 @@
 		DD14B0471C97B16B0013725D /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
+				DD3453EF1C97F43900B8E1B9 /* libmysqlclient.dylib */,
 				DD14B0401C97AD540013725D /* libVapor.dylib */,
 			);
 			name = Dependencies;
@@ -275,11 +279,16 @@
 		DD4F242B1C97AADF00A4B76B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_MODULES = YES;
+				HEADER_SEARCH_PATHS = "/usr/local/include/**";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/../.build/debug";
+				LIBRARY_SEARCH_PATHS = (
+					"$(SRCROOT)/../.build/debug",
+					/usr/local/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/../.build/debug";
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/../.build/debug /usr/local/lib";
 				SWIFT_OBJC_BRIDGING_HEADER = "SwiftGGAppServer/SwiftGGAppServer-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -288,11 +297,16 @@
 		DD4F242C1C97AADF00A4B76B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_MODULES = YES;
+				HEADER_SEARCH_PATHS = "/usr/local/include/**";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/../.build/debug";
+				LIBRARY_SEARCH_PATHS = (
+					"$(SRCROOT)/../.build/debug",
+					/usr/local/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/../.build/debug";
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/../.build/debug /usr/local/lib";
 				SWIFT_OBJC_BRIDGING_HEADER = "SwiftGGAppServer/SwiftGGAppServer-Bridging-Header.h";
 			};
 			name = Release;
