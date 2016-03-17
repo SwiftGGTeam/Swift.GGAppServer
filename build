@@ -12,3 +12,13 @@ echo 'let lib = Product(name: "MySQL", type: .Library(.Dynamic), modules: "MySQL
 echo "Building..."
 
 swift build -Xlinker -L/usr/local/lib -Xcc -I/usr/local/include/mysql -v
+
+# replace CryptoSwift at SHA2.swift line 276
+# result += [ UInt8(item & 0xff) ]
+# result += [ UInt8((item >> 8) & 0xff) ]
+# result += [ UInt8((item >> 16) & 0xff) ]
+# result += [ UInt8((item >> 24) & 0xff) ]
+# result += [ UInt8((item >> 32) & 0xff) ]
+# result += [ UInt8((item >> 40) & 0xff) ]
+# result += [ UInt8((item >> 48) & 0xff) ]
+# result += [ UInt8((item >> 56) & 0xff) ]
