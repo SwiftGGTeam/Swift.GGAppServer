@@ -28,23 +28,7 @@ extension ViewController {
     @IBAction func startServer(sender: AnyObject) {
         
         let app = Application()
-
-        app.get("/") { request in
-            return "Hello SwiftGG!"
-        }
-
-        app.post("/v1/user/otherLogin", handler: UserController().otherLoginV1)
-
-        app.any("/v1/user/userRegister", handler: UserController().registerV1)
-
-        app.post("/v1/user/getInfo", handler: UserController().getInfoV1)
-
-        app.post("/v1/article/getCategoryList", handler: ArticleController().getCategoryListV1)
-
-        app.post("/v1/article/getDetail", handler: ArticleController().getDetailV1)
-
-        app.post("/v1/catch/newArticle", handler: CatchController().addNewArticle)
-        
+        app.configRoute()
         app.start(port: 4000)
         
     }

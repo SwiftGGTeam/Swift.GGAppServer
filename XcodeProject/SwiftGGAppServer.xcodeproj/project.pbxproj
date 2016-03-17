@@ -18,6 +18,7 @@
 		DD7D57CD1C9AA5A000769DF3 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7D57C61C9AA5A000769DF3 /* UserController.swift */; };
 		DD7D57CE1C9AA5A000769DF3 /* LogMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7D57C81C9AA5A000769DF3 /* LogMiddleware.swift */; };
 		DD7D57CF1C9AA5A000769DF3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7D57CA1C9AA5A000769DF3 /* User.swift */; };
+		DDCE8E1C1C9AAF4E000B8DA9 /* SwiftGGAppServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCE8E1B1C9AAF4E000B8DA9 /* SwiftGGAppServer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		DD7D57C61C9AA5A000769DF3 /* UserController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
 		DD7D57C81C9AA5A000769DF3 /* LogMiddleware.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogMiddleware.swift; sourceTree = "<group>"; };
 		DD7D57CA1C9AA5A000769DF3 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		DDCE8E1B1C9AAF4E000B8DA9 /* SwiftGGAppServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftGGAppServer.swift; path = ../../Sources/SwiftGGAppServer/SwiftGGAppServer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 			children = (
 				DD7D57B01C9AA4E800769DF3 /* AppDelegate.swift */,
 				DD7D57B21C9AA4E800769DF3 /* ViewController.swift */,
+				DDCE8E1B1C9AAF4E000B8DA9 /* SwiftGGAppServer.swift */,
 				DD7D57D01C9AABE800769DF3 /* Assets */,
 				DD7D57C31C9AA5A000769DF3 /* Controllers */,
 				DD7D57C71C9AA5A000769DF3 /* Middleware */,
@@ -201,6 +204,7 @@
 				DD7D57B31C9AA4E800769DF3 /* ViewController.swift in Sources */,
 				DD7D57CE1C9AA5A000769DF3 /* LogMiddleware.swift in Sources */,
 				DD7D57CD1C9AA5A000769DF3 /* UserController.swift in Sources */,
+				DDCE8E1C1C9AAF4E000B8DA9 /* SwiftGGAppServer.swift in Sources */,
 				DD7D57B11C9AA4E800769DF3 /* AppDelegate.swift in Sources */,
 				DD7D57CC1C9AA5A000769DF3 /* CatchController.swift in Sources */,
 				DD7D57CF1C9AA5A000769DF3 /* User.swift in Sources */,
