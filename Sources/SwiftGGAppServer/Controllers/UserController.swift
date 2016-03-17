@@ -8,6 +8,7 @@
 
 import Vapor
 import MySQL
+//import Foundation
 
 class UserController : Controller {
 
@@ -28,24 +29,30 @@ class UserController : Controller {
         
     }
     
-    func registerV1(request: Request) throws -> ResponseConvertible {
-        
-        let (rows, status): ([User], QueryStatus) = try pool.execute { conn in
-            try conn.query("SELECT id,account,password,nickname FROM users")
-        }
-        
-        print(status)
-        print(rows)
-        
-        return try Json(["lub": "dub"])
+    func loginV1(request: Request) throws -> ResponseConvertible {
+        return ""
     }
-    
+
     func otherLoginV1(request: Request) throws -> ResponseConvertible {
         return ""
     }
     
+    func registerV1(request: Request) throws -> ResponseConvertible {
+        return try Json(["lub": "dub"])
+    }
+    
     func getInfoV1(request: Request) throws -> ResponseConvertible {
-        return ""
+        
+        let (rows, _): ([User], QueryStatus) = try pool.execute { conn in
+            try conn.query("SELECT id,account,password,nickname FROM sg_user;") as ([User], QueryStatus)
+        }
+        
+        print(rows)
+        
+        let result = try rows.map { try Json(["username": $0.username]) }
+        print(result)
+        
+        return Json(result)
     }
     
 }
