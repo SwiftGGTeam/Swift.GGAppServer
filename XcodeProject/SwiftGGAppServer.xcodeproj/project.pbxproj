@@ -7,116 +7,136 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DD14B0481C97B2C90013725D /* libVapor.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DD14B0401C97AD540013725D /* libVapor.dylib */; };
-		DD82AB4E1C9973DE004C30C8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD82AB4D1C9973DE004C30C8 /* User.swift */; };
-		DD8D978D1C992ED800A2CF69 /* ArticleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8D97871C992ED800A2CF69 /* ArticleController.swift */; };
-		DD8D978E1C992ED800A2CF69 /* CatchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8D97881C992ED800A2CF69 /* CatchController.swift */; };
-		DD8D978F1C992ED800A2CF69 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8D97891C992ED800A2CF69 /* UserController.swift */; };
-		DD8D97901C992ED800A2CF69 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8D978A1C992ED800A2CF69 /* main.swift */; };
-		DD8D97911C992ED800A2CF69 /* LogMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8D978C1C992ED800A2CF69 /* LogMiddleware.swift */; };
-		DDD4E1601C99698200FEE50A /* libMySQL.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DDD4E15F1C99698200FEE50A /* libMySQL.dylib */; };
+		DD7D57B11C9AA4E800769DF3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7D57B01C9AA4E800769DF3 /* AppDelegate.swift */; };
+		DD7D57B31C9AA4E800769DF3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7D57B21C9AA4E800769DF3 /* ViewController.swift */; };
+		DD7D57B51C9AA4E800769DF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD7D57B41C9AA4E800769DF3 /* Assets.xcassets */; };
+		DD7D57B81C9AA4E800769DF3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD7D57B61C9AA4E800769DF3 /* Main.storyboard */; };
+		DD7D57C11C9AA56F00769DF3 /* libMySQL.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DD7D57BF1C9AA56F00769DF3 /* libMySQL.dylib */; };
+		DD7D57C21C9AA56F00769DF3 /* libVapor.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DD7D57C01C9AA56F00769DF3 /* libVapor.dylib */; };
+		DD7D57CB1C9AA5A000769DF3 /* ArticleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7D57C41C9AA5A000769DF3 /* ArticleController.swift */; };
+		DD7D57CC1C9AA5A000769DF3 /* CatchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7D57C51C9AA5A000769DF3 /* CatchController.swift */; };
+		DD7D57CD1C9AA5A000769DF3 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7D57C61C9AA5A000769DF3 /* UserController.swift */; };
+		DD7D57CE1C9AA5A000769DF3 /* LogMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7D57C81C9AA5A000769DF3 /* LogMiddleware.swift */; };
+		DD7D57CF1C9AA5A000769DF3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7D57CA1C9AA5A000769DF3 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		DD14B0401C97AD540013725D /* libVapor.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libVapor.dylib; path = ../.build/debug/libVapor.dylib; sourceTree = "<group>"; };
-		DD14B0441C97B15C0013725D /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Package.swift; path = ../Package.swift; sourceTree = "<group>"; };
-		DD4F24231C97AADF00A4B76B /* SwiftGGAppServer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SwiftGGAppServer; sourceTree = BUILT_PRODUCTS_DIR; };
-		DD82AB4D1C9973DE004C30C8 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		DD8D97871C992ED800A2CF69 /* ArticleController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleController.swift; sourceTree = "<group>"; };
-		DD8D97881C992ED800A2CF69 /* CatchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatchController.swift; sourceTree = "<group>"; };
-		DD8D97891C992ED800A2CF69 /* UserController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
-		DD8D978A1C992ED800A2CF69 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		DD8D978C1C992ED800A2CF69 /* LogMiddleware.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogMiddleware.swift; sourceTree = "<group>"; };
-		DDD4E15F1C99698200FEE50A /* libMySQL.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libMySQL.dylib; path = ../.build/debug/libMySQL.dylib; sourceTree = "<group>"; };
+		DD7D57AD1C9AA4E800769DF3 /* SwiftGGAppServer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftGGAppServer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD7D57B01C9AA4E800769DF3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DD7D57B21C9AA4E800769DF3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DD7D57B41C9AA4E800769DF3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DD7D57B71C9AA4E800769DF3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DD7D57B91C9AA4E800769DF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD7D57BF1C9AA56F00769DF3 /* libMySQL.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libMySQL.dylib; path = ../../.build/debug/libMySQL.dylib; sourceTree = "<group>"; };
+		DD7D57C01C9AA56F00769DF3 /* libVapor.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libVapor.dylib; path = ../../.build/debug/libVapor.dylib; sourceTree = "<group>"; };
+		DD7D57C41C9AA5A000769DF3 /* ArticleController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleController.swift; sourceTree = "<group>"; };
+		DD7D57C51C9AA5A000769DF3 /* CatchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatchController.swift; sourceTree = "<group>"; };
+		DD7D57C61C9AA5A000769DF3 /* UserController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
+		DD7D57C81C9AA5A000769DF3 /* LogMiddleware.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogMiddleware.swift; sourceTree = "<group>"; };
+		DD7D57CA1C9AA5A000769DF3 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		DD4F24201C97AADF00A4B76B /* Frameworks */ = {
+		DD7D57AA1C9AA4E700769DF3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDD4E1601C99698200FEE50A /* libMySQL.dylib in Frameworks */,
-				DD14B0481C97B2C90013725D /* libVapor.dylib in Frameworks */,
+				DD7D57C11C9AA56F00769DF3 /* libMySQL.dylib in Frameworks */,
+				DD7D57C21C9AA56F00769DF3 /* libVapor.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		DD14B0471C97B16B0013725D /* Dependencies */ = {
+		DD7D57A41C9AA4E700769DF3 = {
 			isa = PBXGroup;
 			children = (
-				DDD4E15F1C99698200FEE50A /* libMySQL.dylib */,
-				DD14B0401C97AD540013725D /* libVapor.dylib */,
-			);
-			name = Dependencies;
-			sourceTree = "<group>";
-		};
-		DD4F241A1C97AADF00A4B76B = {
-			isa = PBXGroup;
-			children = (
-				DD14B0441C97B15C0013725D /* Package.swift */,
-				DD8D97851C992ED800A2CF69 /* SwiftGGAppServer */,
-				DD14B0471C97B16B0013725D /* Dependencies */,
-				DD4F24241C97AADF00A4B76B /* Products */,
+				DD7D57AF1C9AA4E800769DF3 /* SwiftGGAppServer */,
+				DD7D57AE1C9AA4E800769DF3 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		DD4F24241C97AADF00A4B76B /* Products */ = {
+		DD7D57AE1C9AA4E800769DF3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DD4F24231C97AADF00A4B76B /* SwiftGGAppServer */,
+				DD7D57AD1C9AA4E800769DF3 /* SwiftGGAppServer.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		DD82AB4C1C9973DE004C30C8 /* Models */ = {
+		DD7D57AF1C9AA4E800769DF3 /* SwiftGGAppServer */ = {
 			isa = PBXGroup;
 			children = (
-				DD82AB4D1C9973DE004C30C8 /* User.swift */,
+				DD7D57B01C9AA4E800769DF3 /* AppDelegate.swift */,
+				DD7D57B21C9AA4E800769DF3 /* ViewController.swift */,
+				DD7D57D01C9AABE800769DF3 /* Assets */,
+				DD7D57C31C9AA5A000769DF3 /* Controllers */,
+				DD7D57C71C9AA5A000769DF3 /* Middleware */,
+				DD7D57C91C9AA5A000769DF3 /* Models */,
+				DD7D57D11C9AAC0E00769DF3 /* Dependencies */,
 			);
-			path = Models;
+			path = SwiftGGAppServer;
 			sourceTree = "<group>";
 		};
-		DD8D97851C992ED800A2CF69 /* SwiftGGAppServer */ = {
+		DD7D57C31C9AA5A000769DF3 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				DD8D978A1C992ED800A2CF69 /* main.swift */,
-				DD8D97861C992ED800A2CF69 /* Controllers */,
-				DD8D978B1C992ED800A2CF69 /* Middleware */,
-				DD82AB4C1C9973DE004C30C8 /* Models */,
+				DD7D57C41C9AA5A000769DF3 /* ArticleController.swift */,
+				DD7D57C51C9AA5A000769DF3 /* CatchController.swift */,
+				DD7D57C61C9AA5A000769DF3 /* UserController.swift */,
 			);
-			name = SwiftGGAppServer;
-			path = ../Sources/SwiftGGAppServer;
+			name = Controllers;
+			path = ../../Sources/SwiftGGAppServer/Controllers;
 			sourceTree = "<group>";
 		};
-		DD8D97861C992ED800A2CF69 /* Controllers */ = {
+		DD7D57C71C9AA5A000769DF3 /* Middleware */ = {
 			isa = PBXGroup;
 			children = (
-				DD8D97871C992ED800A2CF69 /* ArticleController.swift */,
-				DD8D97881C992ED800A2CF69 /* CatchController.swift */,
-				DD8D97891C992ED800A2CF69 /* UserController.swift */,
+				DD7D57C81C9AA5A000769DF3 /* LogMiddleware.swift */,
 			);
-			path = Controllers;
+			name = Middleware;
+			path = ../../Sources/SwiftGGAppServer/Middleware;
 			sourceTree = "<group>";
 		};
-		DD8D978B1C992ED800A2CF69 /* Middleware */ = {
+		DD7D57C91C9AA5A000769DF3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				DD8D978C1C992ED800A2CF69 /* LogMiddleware.swift */,
+				DD7D57CA1C9AA5A000769DF3 /* User.swift */,
 			);
-			path = Middleware;
+			name = Models;
+			path = ../../Sources/SwiftGGAppServer/Models;
+			sourceTree = "<group>";
+		};
+		DD7D57D01C9AABE800769DF3 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				DD7D57B41C9AA4E800769DF3 /* Assets.xcassets */,
+				DD7D57B61C9AA4E800769DF3 /* Main.storyboard */,
+				DD7D57B91C9AA4E800769DF3 /* Info.plist */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		DD7D57D11C9AAC0E00769DF3 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				DD7D57BF1C9AA56F00769DF3 /* libMySQL.dylib */,
+				DD7D57C01C9AA56F00769DF3 /* libVapor.dylib */,
+			);
+			name = Dependencies;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DD4F24221C97AADF00A4B76B /* SwiftGGAppServer */ = {
+		DD7D57AC1C9AA4E700769DF3 /* SwiftGGAppServer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DD4F242A1C97AADF00A4B76B /* Build configuration list for PBXNativeTarget "SwiftGGAppServer" */;
+			buildConfigurationList = DD7D57BC1C9AA4E800769DF3 /* Build configuration list for PBXNativeTarget "SwiftGGAppServer" */;
 			buildPhases = (
-				DD4F241F1C97AADF00A4B76B /* Sources */,
-				DD4F24201C97AADF00A4B76B /* Frameworks */,
+				DD7D57A91C9AA4E700769DF3 /* Sources */,
+				DD7D57AA1C9AA4E700769DF3 /* Frameworks */,
+				DD7D57AB1C9AA4E700769DF3 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -124,59 +144,84 @@
 			);
 			name = SwiftGGAppServer;
 			productName = SwiftGGAppServer;
-			productReference = DD4F24231C97AADF00A4B76B /* SwiftGGAppServer */;
-			productType = "com.apple.product-type.tool";
+			productReference = DD7D57AD1C9AA4E800769DF3 /* SwiftGGAppServer.app */;
+			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		DD4F241B1C97AADF00A4B76B /* Project object */ = {
+		DD7D57A51C9AA4E700769DF3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = SwiftGG;
 				TargetAttributes = {
-					DD4F24221C97AADF00A4B76B = {
+					DD7D57AC1C9AA4E700769DF3 = {
 						CreatedOnToolsVersion = 7.2.1;
 					};
 				};
 			};
-			buildConfigurationList = DD4F241E1C97AADF00A4B76B /* Build configuration list for PBXProject "SwiftGGAppServer" */;
+			buildConfigurationList = DD7D57A81C9AA4E700769DF3 /* Build configuration list for PBXProject "SwiftGGAppServer" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
-			mainGroup = DD4F241A1C97AADF00A4B76B;
-			productRefGroup = DD4F24241C97AADF00A4B76B /* Products */;
+			mainGroup = DD7D57A41C9AA4E700769DF3;
+			productRefGroup = DD7D57AE1C9AA4E800769DF3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DD4F24221C97AADF00A4B76B /* SwiftGGAppServer */,
+				DD7D57AC1C9AA4E700769DF3 /* SwiftGGAppServer */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		DD7D57AB1C9AA4E700769DF3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD7D57B51C9AA4E800769DF3 /* Assets.xcassets in Resources */,
+				DD7D57B81C9AA4E800769DF3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		DD4F241F1C97AADF00A4B76B /* Sources */ = {
+		DD7D57A91C9AA4E700769DF3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD8D978F1C992ED800A2CF69 /* UserController.swift in Sources */,
-				DD8D978D1C992ED800A2CF69 /* ArticleController.swift in Sources */,
-				DD82AB4E1C9973DE004C30C8 /* User.swift in Sources */,
-				DD8D97901C992ED800A2CF69 /* main.swift in Sources */,
-				DD8D978E1C992ED800A2CF69 /* CatchController.swift in Sources */,
-				DD8D97911C992ED800A2CF69 /* LogMiddleware.swift in Sources */,
+				DD7D57CB1C9AA5A000769DF3 /* ArticleController.swift in Sources */,
+				DD7D57B31C9AA4E800769DF3 /* ViewController.swift in Sources */,
+				DD7D57CE1C9AA5A000769DF3 /* LogMiddleware.swift in Sources */,
+				DD7D57CD1C9AA5A000769DF3 /* UserController.swift in Sources */,
+				DD7D57B11C9AA4E800769DF3 /* AppDelegate.swift in Sources */,
+				DD7D57CC1C9AA5A000769DF3 /* CatchController.swift in Sources */,
+				DD7D57CF1C9AA5A000769DF3 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		DD7D57B61C9AA4E800769DF3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DD7D57B71C9AA4E800769DF3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
-		DD4F24281C97AADF00A4B76B /* Debug */ = {
+		DD7D57BA1C9AA4E800769DF3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -220,7 +265,7 @@
 			};
 			name = Debug;
 		};
-		DD4F24291C97AADF00A4B76B /* Release */ = {
+		DD7D57BB1C9AA4E800769DF3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -256,65 +301,56 @@
 			};
 			name = Release;
 		};
-		DD4F242B1C97AADF00A4B76B /* Debug */ = {
+		DD7D57BD1C9AA4E800769DF3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD)";
-				CLANG_ENABLE_MODULES = YES;
-				FRAMEWORK_SEARCH_PATHS = "";
-				HEADER_SEARCH_PATHS = "";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SwiftGGAppServer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/../.build/debug";
-				OTHER_LDFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = gg.swift.SwiftGGAppServer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/../.build/debug $(SRCROOT)/SwiftGGAppServer/External";
-				SWIFT_OBJC_BRIDGING_HEADER = "SwiftGGAppServer/SwiftGGAppServer-Bridging-Header.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				VALID_ARCHS = "i386 x86_64";
 			};
 			name = Debug;
 		};
-		DD4F242C1C97AADF00A4B76B /* Release */ = {
+		DD7D57BE1C9AA4E800769DF3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD)";
-				CLANG_ENABLE_MODULES = YES;
-				FRAMEWORK_SEARCH_PATHS = "";
-				HEADER_SEARCH_PATHS = "";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SwiftGGAppServer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/../.build/debug";
-				OTHER_LDFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = gg.swift.SwiftGGAppServer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/../.build/debug $(SRCROOT)/SwiftGGAppServer/External";
-				SWIFT_OBJC_BRIDGING_HEADER = "SwiftGGAppServer/SwiftGGAppServer-Bridging-Header.h";
-				VALID_ARCHS = "i386 x86_64";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DD4F241E1C97AADF00A4B76B /* Build configuration list for PBXProject "SwiftGGAppServer" */ = {
+		DD7D57A81C9AA4E700769DF3 /* Build configuration list for PBXProject "SwiftGGAppServer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DD4F24281C97AADF00A4B76B /* Debug */,
-				DD4F24291C97AADF00A4B76B /* Release */,
+				DD7D57BA1C9AA4E800769DF3 /* Debug */,
+				DD7D57BB1C9AA4E800769DF3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DD4F242A1C97AADF00A4B76B /* Build configuration list for PBXNativeTarget "SwiftGGAppServer" */ = {
+		DD7D57BC1C9AA4E800769DF3 /* Build configuration list for PBXNativeTarget "SwiftGGAppServer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DD4F242B1C97AADF00A4B76B /* Debug */,
-				DD4F242C1C97AADF00A4B76B /* Release */,
+				DD7D57BD1C9AA4E800769DF3 /* Debug */,
+				DD7D57BE1C9AA4E800769DF3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = DD4F241B1C97AADF00A4B76B /* Project object */;
+	rootObject = DD7D57A51C9AA4E700769DF3 /* Project object */;
 }
