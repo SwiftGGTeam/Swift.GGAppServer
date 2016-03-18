@@ -8,7 +8,7 @@ echo "Fixing SPM bug..."
 rm -rf Packages/*/Tests
 
 echo -e '\n' >> $PWD/Packages/MySQL-0.1.14/Package.swift
-echo 'let lib = Product(name: "MySQL", type: .Library(.Dynamic), modules: "MySQL"); products.append(lib)' >> $PWD/Packages/MySQL-0.1.12/Package.swift
+echo 'let lib = Product(name: "MySQL", type: .Library(.Dynamic), modules: "MySQL"); products.append(lib)' >> $PWD/Packages/MySQL-0.1.14/Package.swift
 
 echo -e '\n' >> $PWD/Packages/CryptoSwift-0.2.3/Package.swift
 echo 'let lib = Product(name: "CryptoSwift", type: .Library(.Dynamic), modules: "CryptoSwift"); products.append(lib)' >> $PWD/Packages/CryptoSwift-0.2.3/Package.swift

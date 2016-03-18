@@ -9,6 +9,7 @@
 import Vapor
 import MySQL
 import CryptoSwift
+import SwiftyJSON
 
 class UserController : Controller {
 
@@ -28,18 +29,18 @@ class UserController : Controller {
     required init() {
 
     }
-    
+
     func newLoginV1(request: Request, username: String, password: String) throws -> ResponseConvertible {
          print("the username is \(username) and password \(password)")
         return try login(username, password: password)
     }
 
     func loginV1(request: Request) throws -> ResponseConvertible {
-        
+
         let params = request.data.query
         let username = params["username"]
         let password = params["password"]
-        
+
         return try login(username, password: password)
     }
 
@@ -69,27 +70,27 @@ class UserController : Controller {
 
 
 extension UserController {
-    
+
     func login(username: String?, password: String?) throws -> ResponseConvertible {
-        
+
         // 参数判空
         guard let _ = username, _ = password else {
-            return try commonResponse(code: Errors.Code_Success, message: Errors.Msg_Success)
+            return try commonResponse(code: Errors.Code_ParameterInvalid, message: Errors.Msg_ParameterInvalid)
         }
-        
+
         // 判断是否含有特殊字符
         // 判断长度
         // 查询账号信息
-        
+
         let queryParams = ( username! )
-        
+
         let (users, _): ([User], QueryStatus) = try pool.execute { conn in
             try conn.query("SELECT id,account,password,salt,nickname FROM sg_user where account = ?", build(queryParams)) as ([User], QueryStatus)
         }
-        
-        
+
+
         var finalUser: User?
-        
+
         for user in users {
             let md5Password = user.password;
             let salt = user.salt
@@ -98,12 +99,13 @@ extension UserController {
                 break;
             }
         }
-        
+
         if let result = finalUser {
-            return try commonResponse(responseData: Json(["userId": String(result.id)]))
+            let responseData = ["userId": String(result.id)]
+            return try commonResponse(responseData: responseData)
         } else {
-            return "没有发现此账户"
+            return try commonResponse(code: Errors.Code_UserValid, message: Errors.Msg_UserValid)
         }
     }
-    
+
 }

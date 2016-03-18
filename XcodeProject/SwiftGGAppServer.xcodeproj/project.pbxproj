@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD55F5391C9BF4AD007CAAA0 /* libSwiftyJSON.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DD55F5381C9BF4AD007CAAA0 /* libSwiftyJSON.dylib */; };
 		DD640B791C9B7A42008FA73D /* libCryptoSwift.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DD640B781C9B7A42008FA73D /* libCryptoSwift.dylib */; };
 		DD7D57B11C9AA4E800769DF3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7D57B01C9AA4E800769DF3 /* AppDelegate.swift */; };
 		DD7D57B31C9AA4E800769DF3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7D57B21C9AA4E800769DF3 /* ViewController.swift */; };
@@ -22,9 +23,11 @@
 		DDCB18A61C9BC7C400A993F4 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCB18A51C9BC7C400A993F4 /* Errors.swift */; };
 		DDCB18A81C9BC87B00A993F4 /* Controller+Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCB18A71C9BC87B00A993F4 /* Controller+Common.swift */; };
 		DDCE8E1C1C9AAF4E000B8DA9 /* SwiftGGAppServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCE8E1B1C9AAF4E000B8DA9 /* SwiftGGAppServer.swift */; };
+		DDCF5F471C9C268400D1FE08 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCF5F461C9C268400D1FE08 /* Config.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DD55F5381C9BF4AD007CAAA0 /* libSwiftyJSON.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libSwiftyJSON.dylib; path = ../../.build/debug/libSwiftyJSON.dylib; sourceTree = "<group>"; };
 		DD640B781C9B7A42008FA73D /* libCryptoSwift.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libCryptoSwift.dylib; path = ../../.build/debug/libCryptoSwift.dylib; sourceTree = "<group>"; };
 		DD7D57AD1C9AA4E800769DF3 /* SwiftGGAppServer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftGGAppServer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD7D57B01C9AA4E800769DF3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -42,6 +45,7 @@
 		DDCB18A51C9BC7C400A993F4 /* Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Errors.swift; path = ../../Sources/SwiftGGAppServer/Errors.swift; sourceTree = "<group>"; };
 		DDCB18A71C9BC87B00A993F4 /* Controller+Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Controller+Common.swift"; sourceTree = "<group>"; };
 		DDCE8E1B1C9AAF4E000B8DA9 /* SwiftGGAppServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftGGAppServer.swift; path = ../../Sources/SwiftGGAppServer/SwiftGGAppServer.swift; sourceTree = "<group>"; };
+		DDCF5F461C9C268400D1FE08 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD55F5391C9BF4AD007CAAA0 /* libSwiftyJSON.dylib in Frameworks */,
 				DD640B791C9B7A42008FA73D /* libCryptoSwift.dylib in Frameworks */,
 				DD7D57C11C9AA56F00769DF3 /* libMySQL.dylib in Frameworks */,
 				DD7D57C21C9AA56F00769DF3 /* libVapor.dylib in Frameworks */,
@@ -81,6 +86,7 @@
 				DD7D57B21C9AA4E800769DF3 /* ViewController.swift */,
 				DDCE8E1B1C9AAF4E000B8DA9 /* SwiftGGAppServer.swift */,
 				DDCB18A51C9BC7C400A993F4 /* Errors.swift */,
+				DDCF5F461C9C268400D1FE08 /* Config.swift */,
 				DD7D57D01C9AABE800769DF3 /* Assets */,
 				DD7D57C31C9AA5A000769DF3 /* Controllers */,
 				DD7D57C71C9AA5A000769DF3 /* Middleware */,
@@ -133,6 +139,7 @@
 		DD7D57D11C9AAC0E00769DF3 /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
+				DD55F5381C9BF4AD007CAAA0 /* libSwiftyJSON.dylib */,
 				DD640B781C9B7A42008FA73D /* libCryptoSwift.dylib */,
 				DD7D57BF1C9AA56F00769DF3 /* libMySQL.dylib */,
 				DD7D57C01C9AA56F00769DF3 /* libVapor.dylib */,
@@ -214,6 +221,7 @@
 				DD7D57B31C9AA4E800769DF3 /* ViewController.swift in Sources */,
 				DD7D57CE1C9AA5A000769DF3 /* LogMiddleware.swift in Sources */,
 				DD7D57CD1C9AA5A000769DF3 /* UserController.swift in Sources */,
+				DDCF5F471C9C268400D1FE08 /* Config.swift in Sources */,
 				DDCE8E1C1C9AAF4E000B8DA9 /* SwiftGGAppServer.swift in Sources */,
 				DD7D57B11C9AA4E800769DF3 /* AppDelegate.swift in Sources */,
 				DD7D57CC1C9AA5A000769DF3 /* CatchController.swift in Sources */,
