@@ -16,6 +16,11 @@ extension Application {
             return "Hello SwiftGG!"
         }
         
+        get("/v1/user/login", String.self, String.self) { (request, username, password) -> ResponseConvertible in
+            return try UserController().newLoginV1(request, username: username, password: password)
+        }
+        
+        any("/v1/user/login", handler: UserController().loginV1)
         any("/v1/user/otherLogin", handler: UserController().otherLoginV1)
         any("/v1/user/userRegister", handler: UserController().registerV1)
         any("/v1/user/getInfo", handler: UserController().getInfoV1)

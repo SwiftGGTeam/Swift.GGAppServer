@@ -34,21 +34,26 @@ brew install mysql
 git clone https://github.com/SwiftGGTeam/Swift.GGAppServer.git
 ```
 
-4.Build
+4.Fix codes to support SPM
+```
+cd yourcodefolder
+./fix
+```
+
+5.Build
 
 ```sh
 cd yourcodefolder
-chmod +x build
 ./build
 ```
 
-5.Run
+6.Run
 
 ```sh
 .build/debug/SwiftGGAppServer
 ```
 
-6.Xcode Support
+7.Xcode Support
 
 Unfortunately, the mysql header file has some issue when Xcode to build and link, so now we modify it by hand.
 
@@ -78,5 +83,17 @@ In the source folder, we write some shell script to help `build`, `clean`, `run`
 
 - [x] make a new Xcode Cocoa Application, Support using the GUI to run the server on osx
 - [x] make a fix shell to prefix the build problems
-- [ ] UserController feature
 - [ ] Error Constants
+
+## Feature
+
+### User
+- [x] Login
+- [ ] Register
+- [ ] Info
+
+### Article
+- [ ] CategoryList
+- [ ] ArticleInfo
+- [ ] Detail
+- [ ] NewArticle

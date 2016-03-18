@@ -19,6 +19,8 @@
 		DD7D57CD1C9AA5A000769DF3 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7D57C61C9AA5A000769DF3 /* UserController.swift */; };
 		DD7D57CE1C9AA5A000769DF3 /* LogMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7D57C81C9AA5A000769DF3 /* LogMiddleware.swift */; };
 		DD7D57CF1C9AA5A000769DF3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7D57CA1C9AA5A000769DF3 /* User.swift */; };
+		DDCB18A61C9BC7C400A993F4 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCB18A51C9BC7C400A993F4 /* Errors.swift */; };
+		DDCB18A81C9BC87B00A993F4 /* Controller+Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCB18A71C9BC87B00A993F4 /* Controller+Common.swift */; };
 		DDCE8E1C1C9AAF4E000B8DA9 /* SwiftGGAppServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCE8E1B1C9AAF4E000B8DA9 /* SwiftGGAppServer.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +39,8 @@
 		DD7D57C61C9AA5A000769DF3 /* UserController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
 		DD7D57C81C9AA5A000769DF3 /* LogMiddleware.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogMiddleware.swift; sourceTree = "<group>"; };
 		DD7D57CA1C9AA5A000769DF3 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		DDCB18A51C9BC7C400A993F4 /* Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Errors.swift; path = ../../Sources/SwiftGGAppServer/Errors.swift; sourceTree = "<group>"; };
+		DDCB18A71C9BC87B00A993F4 /* Controller+Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Controller+Common.swift"; sourceTree = "<group>"; };
 		DDCE8E1B1C9AAF4E000B8DA9 /* SwiftGGAppServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftGGAppServer.swift; path = ../../Sources/SwiftGGAppServer/SwiftGGAppServer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -76,6 +80,7 @@
 				DD7D57B01C9AA4E800769DF3 /* AppDelegate.swift */,
 				DD7D57B21C9AA4E800769DF3 /* ViewController.swift */,
 				DDCE8E1B1C9AAF4E000B8DA9 /* SwiftGGAppServer.swift */,
+				DDCB18A51C9BC7C400A993F4 /* Errors.swift */,
 				DD7D57D01C9AABE800769DF3 /* Assets */,
 				DD7D57C31C9AA5A000769DF3 /* Controllers */,
 				DD7D57C71C9AA5A000769DF3 /* Middleware */,
@@ -88,6 +93,7 @@
 		DD7D57C31C9AA5A000769DF3 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				DDCB18A71C9BC87B00A993F4 /* Controller+Common.swift */,
 				DD7D57C41C9AA5A000769DF3 /* ArticleController.swift */,
 				DD7D57C51C9AA5A000769DF3 /* CatchController.swift */,
 				DD7D57C61C9AA5A000769DF3 /* UserController.swift */,
@@ -211,6 +217,8 @@
 				DDCE8E1C1C9AAF4E000B8DA9 /* SwiftGGAppServer.swift in Sources */,
 				DD7D57B11C9AA4E800769DF3 /* AppDelegate.swift in Sources */,
 				DD7D57CC1C9AA5A000769DF3 /* CatchController.swift in Sources */,
+				DDCB18A61C9BC7C400A993F4 /* Errors.swift in Sources */,
+				DDCB18A81C9BC87B00A993F4 /* Controller+Common.swift in Sources */,
 				DD7D57CF1C9AA5A000769DF3 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
