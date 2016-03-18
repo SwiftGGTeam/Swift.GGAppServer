@@ -23,7 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		DD640B781C9B7A42008FA73D /* libCryptoSwift.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libCryptoSwift.dylib; path = ../.build/debug/libCryptoSwift.dylib; sourceTree = "<group>"; };
+		DD640B781C9B7A42008FA73D /* libCryptoSwift.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libCryptoSwift.dylib; path = ../../.build/debug/libCryptoSwift.dylib; sourceTree = "<group>"; };
 		DD7D57AD1C9AA4E800769DF3 /* SwiftGGAppServer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftGGAppServer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD7D57B01C9AA4E800769DF3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DD7D57B21C9AA4E800769DF3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -57,7 +57,6 @@
 		DD7D57A41C9AA4E700769DF3 = {
 			isa = PBXGroup;
 			children = (
-				DD640B781C9B7A42008FA73D /* libCryptoSwift.dylib */,
 				DD7D57AF1C9AA4E800769DF3 /* SwiftGGAppServer */,
 				DD7D57AE1C9AA4E800769DF3 /* Products */,
 			);
@@ -128,6 +127,7 @@
 		DD7D57D11C9AAC0E00769DF3 /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
+				DD640B781C9B7A42008FA73D /* libCryptoSwift.dylib */,
 				DD7D57BF1C9AA56F00769DF3 /* libMySQL.dylib */,
 				DD7D57C01C9AA56F00769DF3 /* libVapor.dylib */,
 			);
