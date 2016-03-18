@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD640B791C9B7A42008FA73D /* libCryptoSwift.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DD640B781C9B7A42008FA73D /* libCryptoSwift.dylib */; };
 		DD7D57B11C9AA4E800769DF3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7D57B01C9AA4E800769DF3 /* AppDelegate.swift */; };
 		DD7D57B31C9AA4E800769DF3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7D57B21C9AA4E800769DF3 /* ViewController.swift */; };
 		DD7D57B51C9AA4E800769DF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD7D57B41C9AA4E800769DF3 /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DD640B781C9B7A42008FA73D /* libCryptoSwift.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libCryptoSwift.dylib; path = ../.build/debug/libCryptoSwift.dylib; sourceTree = "<group>"; };
 		DD7D57AD1C9AA4E800769DF3 /* SwiftGGAppServer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftGGAppServer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD7D57B01C9AA4E800769DF3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DD7D57B21C9AA4E800769DF3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -43,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD640B791C9B7A42008FA73D /* libCryptoSwift.dylib in Frameworks */,
 				DD7D57C11C9AA56F00769DF3 /* libMySQL.dylib in Frameworks */,
 				DD7D57C21C9AA56F00769DF3 /* libVapor.dylib in Frameworks */,
 			);
@@ -54,6 +57,7 @@
 		DD7D57A41C9AA4E700769DF3 = {
 			isa = PBXGroup;
 			children = (
+				DD640B781C9B7A42008FA73D /* libCryptoSwift.dylib */,
 				DD7D57AF1C9AA4E800769DF3 /* SwiftGGAppServer */,
 				DD7D57AE1C9AA4E800769DF3 /* Products */,
 			);

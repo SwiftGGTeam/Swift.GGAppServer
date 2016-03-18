@@ -9,6 +9,15 @@ rm -rf Packages/*/Tests
 echo -e '\n' >> $PWD/Packages/MySQL-0.1.12/Package.swift
 echo 'let lib = Product(name: "MySQL", type: .Library(.Dynamic), modules: "MySQL"); products.append(lib)' >> $PWD/Packages/MySQL-0.1.12/Package.swift
 
+echo -e '\n' >> $PWD/Packages/CryptoSwift-0.2.3/Package.swift
+echo 'let lib = Product(name: "CryptoSwift", type: .Library(.Dynamic), modules: "CryptoSwift"); products.append(lib)' >> $PWD/Packages/CryptoSwift-0.2.3/Package.swift
+
+# echo "Reclone the CryptoSwift and Switch to the delveop branch"
+# rm -rf Packages/CryptoSwift-0.2.3
+# git clone https://github.com/krzyzanowskim/CryptoSwift.git -b develop Packages/CryptoSwift-0.2.3
+
+echo "Replace the code now and rebuild it.."
+
 echo "Building..."
 
 swift build -Xlinker -L/usr/local/lib -Xcc -I/usr/local/include/mysql -v

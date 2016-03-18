@@ -74,7 +74,9 @@ Next, see the source code, you will find a folder named **XcodeProject**, go in 
 
 In the source folder, we write some shell script to help `build`, `clean`, `run`, `release` our **SwiftGGAppServer**.
 
-## TODO
+## ToDo
 
-- [] UserController feature
-- [] make a new Xcode Cocoa Application, Support using the GUI to run the server on osx
+- [x] make a new Xcode Cocoa Application, Support using the GUI to run the server on osx
+- [x] make a fix shell to prefix the build problems
+- [ ] UserController feature
+- [ ] Error Constants

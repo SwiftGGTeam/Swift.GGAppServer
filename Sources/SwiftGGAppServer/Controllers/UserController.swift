@@ -40,13 +40,29 @@ class UserController : Controller {
         // 判断长度
         // 查询账号信息
 
-        let queryParams: (String, String) = ( username!, password!.md5() )
+        let queryParams = ( username! )
 
-        let (rows, _): ([User], QueryStatus) = try pool.execute { conn in
-            try conn.query("SELECT id,account,password,nickname FROM sg_user where account = ? and password = ?", build(queryParams)) as ([User], QueryStatus)
+        let (users, _): ([User], QueryStatus) = try pool.execute { conn in
+            try conn.query("SELECT id,account,password,nickname FROM sg_user where account = ?", build(queryParams)) as ([User], QueryStatus)
         }
-
-        return try Json(["userId": rows[0].id])
+        
+        
+        var finalUser: User?
+        
+        for user in users {
+            let md5Password = user.password;
+            let salt = user.salt
+            if md5Password == (password! + salt).md5() {
+                finalUser = user
+                break;
+            }
+        }
+        
+        if let result = finalUser {
+            return try Json(["userId": result.id])
+        } else {
+            return "登录失败"
+        }
     }
 
     func otherLoginV1(request: Request) throws -> ResponseConvertible {
