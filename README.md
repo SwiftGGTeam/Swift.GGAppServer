@@ -84,16 +84,19 @@ In the source folder, we write some shell script to help `build`, `clean`, `run`
 - [x] make a new Xcode Cocoa Application, Support using the GUI to run the server on osx
 - [x] make a fix shell to prefix the build problems
 - [x] Error Constants
-- [ ] Add regular expression support,[Regex](https://github.com/crossroadlabs/Regex.git)
-- [ ] Change the database to [PostgreSQL](http://www.postgresql.org)
-- [ ] Change the XcodeProject generate by the command ```swift build -X```
+- [x] add regular expression support,[Regex](https://github.com/crossroadlabs/Regex.git)
+- [ ] generate the radom number util
+- [ ] change the database to [PostgreSQL](http://www.postgresql.org)
+- [ ] change the XcodeProject generate by the command ```swift build -X```
+- [ ] all the http request and response will be encrypt by AES or DES
 
 ## Feature
 
 ### User
 - [x] Login
-- [ ] Register
+- [ ] Register -
 - [ ] Info
+- [ ] login and registe use mobile and captcha, and return the token with expire time
 
 ### Article
 - [ ] CategoryList
@@ -112,4 +115,4 @@ sudo install_name_tool -add_rpath /Library/Developer/Toolchains/swift-DEVELOPMEN
 But when I lanch the Xcode it always tell me `Failed to verify signature!`, so now the `DEVELOPMENT-SNAPSHOT-2016-03-16-a` version is a Bridge.
 
 ## License
-Swift.GGAppServer is released under the MIT license. 
+Swift.GGAppServer is released under the MIT license.
