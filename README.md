@@ -110,3 +110,6 @@ sudo install_name_tool -add_rpath /Library/Developer/Toolchains/swift-DEVELOPMEN
 ```
 
 But when I lanch the Xcode it always tell me `Failed to verify signature!`, so now the `DEVELOPMENT-SNAPSHOT-2016-03-16-a` version is a Bridge.
+
+## License
+Swift.GGAppServer is released under the MIT license. 
