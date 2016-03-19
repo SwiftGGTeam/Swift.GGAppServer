@@ -20,7 +20,7 @@ Sometime the config in OSX and Linux are a bit different, so we will **Seperate*
 1.Install swift
 
 - Go to the [offical websit](https://swift.org/) to download and install the swift.
-- [Swfitenv](https://github.com/kylef/swiftenv) is a better util to control different swift versions.
+- [Swfitenv](https://github.com/kylef/swiftenv) is a better tool to control different swift versions.
 
 2.Install MySQL by [Homebrew](http://brew.sh/)
 
