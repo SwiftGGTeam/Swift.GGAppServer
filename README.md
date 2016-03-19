@@ -83,7 +83,8 @@ In the source folder, we write some shell script to help `build`, `clean`, `run`
 
 - [x] make a new Xcode Cocoa Application, Support using the GUI to run the server on osx
 - [x] make a fix shell to prefix the build problems
-- [ ] Error Constants
+- [x] Error Constants
+- [ ] Add regular expression support,[Regex](https://github.com/crossroadlabs/Regex.git)
 - [ ] Change the database to [PostgreSQL](http://www.postgresql.org)
 - [ ] Change the XcodeProject generate by the command ```swift build -X```
 

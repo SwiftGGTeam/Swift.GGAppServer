@@ -10,6 +10,7 @@ import Vapor
 import MySQL
 import CryptoSwift
 import SwiftyJSON
+import Foundation
 
 class UserController : Controller {
 
