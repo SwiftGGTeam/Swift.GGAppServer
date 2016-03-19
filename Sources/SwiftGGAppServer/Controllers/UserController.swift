@@ -10,7 +10,7 @@ import Vapor
 import MySQL
 import CryptoSwift
 import SwiftyJSON
-import Foundation
+import Regex
 
 class UserController : Controller {
 
@@ -79,15 +79,19 @@ extension UserController {
             return try commonResponse(code: Errors.Code_ParameterInvalid, message: Errors.Msg_ParameterInvalid)
         }
 
+        //用户名验证（允许使用小写字母、数字、下滑线、横杠，一共3~16个字符）
         // 判断是否含有特殊字符
-        
+        if username !~ "^[a-z0-9_-]{3,16}$" {
+            return try commonResponse(code: Errors.Code_UsernameInvalid, message: Errors.Msg_UsernameInvalid)
+        }
+
         // 判断长度
         if username.characters.count < Config.Constant_Username_Length {
-            return try commonResponse(code: Errors.Code_UsernameInValid, message: Errors.Msg_UsernameInValid)
+            return try commonResponse(code: Errors.Code_UsernameLengthInValid, message: Errors.Msg_UsernameLengthInValid)
         }
         
         if password.characters.count < Config.Constant_Password_Length {
-            return try commonResponse(code: Errors.Code_PasswordInValid, message: Errors.Msg_PasswordInValid)
+            return try commonResponse(code: Errors.Code_PasswordLengthInValid, message: Errors.Msg_PasswordLengthInValid)
         }        
         
         let queryParams = ( username )

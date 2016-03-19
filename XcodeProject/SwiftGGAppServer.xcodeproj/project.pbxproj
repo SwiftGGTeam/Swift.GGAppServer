@@ -20,10 +20,11 @@
 		DD7D57CD1C9AA5A000769DF3 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7D57C61C9AA5A000769DF3 /* UserController.swift */; };
 		DD7D57CE1C9AA5A000769DF3 /* LogMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7D57C81C9AA5A000769DF3 /* LogMiddleware.swift */; };
 		DD7D57CF1C9AA5A000769DF3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7D57CA1C9AA5A000769DF3 /* User.swift */; };
+		DD8310D81C9D65D30035C92D /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8310D71C9D65D30035C92D /* Config.swift */; };
+		DD8310DA1C9D6C6D0035C92D /* libRegex.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DD8310D91C9D6C6D0035C92D /* libRegex.dylib */; };
 		DDCB18A61C9BC7C400A993F4 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCB18A51C9BC7C400A993F4 /* Errors.swift */; };
 		DDCB18A81C9BC87B00A993F4 /* Controller+Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCB18A71C9BC87B00A993F4 /* Controller+Common.swift */; };
 		DDCE8E1C1C9AAF4E000B8DA9 /* SwiftGGAppServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCE8E1B1C9AAF4E000B8DA9 /* SwiftGGAppServer.swift */; };
-		DDCF5F471C9C268400D1FE08 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCF5F461C9C268400D1FE08 /* Config.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,10 +43,11 @@
 		DD7D57C61C9AA5A000769DF3 /* UserController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
 		DD7D57C81C9AA5A000769DF3 /* LogMiddleware.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogMiddleware.swift; sourceTree = "<group>"; };
 		DD7D57CA1C9AA5A000769DF3 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		DD8310D71C9D65D30035C92D /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		DD8310D91C9D6C6D0035C92D /* libRegex.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libRegex.dylib; path = ../../.build/debug/libRegex.dylib; sourceTree = "<group>"; };
 		DDCB18A51C9BC7C400A993F4 /* Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Errors.swift; path = ../../Sources/SwiftGGAppServer/Errors.swift; sourceTree = "<group>"; };
 		DDCB18A71C9BC87B00A993F4 /* Controller+Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Controller+Common.swift"; sourceTree = "<group>"; };
 		DDCE8E1B1C9AAF4E000B8DA9 /* SwiftGGAppServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftGGAppServer.swift; path = ../../Sources/SwiftGGAppServer/SwiftGGAppServer.swift; sourceTree = "<group>"; };
-		DDCF5F461C9C268400D1FE08 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD8310DA1C9D6C6D0035C92D /* libRegex.dylib in Frameworks */,
 				DD55F5391C9BF4AD007CAAA0 /* libSwiftyJSON.dylib in Frameworks */,
 				DD640B791C9B7A42008FA73D /* libCryptoSwift.dylib in Frameworks */,
 				DD7D57C11C9AA56F00769DF3 /* libMySQL.dylib in Frameworks */,
@@ -85,8 +88,8 @@
 				DD7D57B01C9AA4E800769DF3 /* AppDelegate.swift */,
 				DD7D57B21C9AA4E800769DF3 /* ViewController.swift */,
 				DDCE8E1B1C9AAF4E000B8DA9 /* SwiftGGAppServer.swift */,
+				DD8310D71C9D65D30035C92D /* Config.swift */,
 				DDCB18A51C9BC7C400A993F4 /* Errors.swift */,
-				DDCF5F461C9C268400D1FE08 /* Config.swift */,
 				DD7D57D01C9AABE800769DF3 /* Assets */,
 				DD7D57C31C9AA5A000769DF3 /* Controllers */,
 				DD7D57C71C9AA5A000769DF3 /* Middleware */,
@@ -139,6 +142,7 @@
 		DD7D57D11C9AAC0E00769DF3 /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
+				DD8310D91C9D6C6D0035C92D /* libRegex.dylib */,
 				DD55F5381C9BF4AD007CAAA0 /* libSwiftyJSON.dylib */,
 				DD640B781C9B7A42008FA73D /* libCryptoSwift.dylib */,
 				DD7D57BF1C9AA56F00769DF3 /* libMySQL.dylib */,
@@ -221,7 +225,7 @@
 				DD7D57B31C9AA4E800769DF3 /* ViewController.swift in Sources */,
 				DD7D57CE1C9AA5A000769DF3 /* LogMiddleware.swift in Sources */,
 				DD7D57CD1C9AA5A000769DF3 /* UserController.swift in Sources */,
-				DDCF5F471C9C268400D1FE08 /* Config.swift in Sources */,
+				DD8310D81C9D65D30035C92D /* Config.swift in Sources */,
 				DDCE8E1C1C9AAF4E000B8DA9 /* SwiftGGAppServer.swift in Sources */,
 				DD7D57B11C9AA4E800769DF3 /* AppDelegate.swift in Sources */,
 				DD7D57CC1C9AA5A000769DF3 /* CatchController.swift in Sources */,

@@ -23,4 +23,7 @@ echo -e ')' >> $PWD/Packages/SwiftyJSON-2.3.3/Package.swift
 echo -e '\n' >> $PWD/Packages/SwiftyJSON-2.3.3/Package.swift
 echo 'let lib = Product(name: "SwiftyJSON", type: .Library(.Dynamic), modules: "SwiftyJSON"); products.append(lib)' >> $PWD/Packages/SwiftyJSON-2.3.3/Package.swift
 
+echo -e '\n' >> $PWD/Packages/Regex-0.5.2/Package.swift
+echo 'let lib = Product(name: "Regex", type: .Library(.Dynamic), modules: "Regex"); products.append(lib)' >> $PWD/Packages/Regex-0.5.2/Package.swift
+
 echo "Fix SPM bug successful ...."
