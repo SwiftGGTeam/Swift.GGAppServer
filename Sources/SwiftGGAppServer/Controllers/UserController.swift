@@ -32,7 +32,7 @@ class UserController : Controller {
 
     func newLoginV1(request: Request, username: String, password: String) throws -> ResponseConvertible {
          print("the username is \(username) and password \(password)")
-        return try login(username, password: password)
+        return try login(username, password)
     }
 
     func loginV1(request: Request) throws -> ResponseConvertible {
@@ -41,7 +41,7 @@ class UserController : Controller {
         let username = params["username"]
         let password = params["password"]
 
-        return try login(username, password: password)
+        return try login(username, password)
     }
 
     func otherLoginV1(request: Request) throws -> ResponseConvertible {
@@ -71,18 +71,25 @@ class UserController : Controller {
 
 extension UserController {
 
-    func login(username: String?, password: String?) throws -> ResponseConvertible {
+    func login(theUsername: String?, _ thePassword: String?) throws -> ResponseConvertible {
 
         // 参数判空
-        guard let _ = username, _ = password else {
+        guard let username = theUsername, password = theUsername else {
             return try commonResponse(code: Errors.Code_ParameterInvalid, message: Errors.Msg_ParameterInvalid)
         }
 
         // 判断是否含有特殊字符
+        
         // 判断长度
-        // 查询账号信息
-
-        let queryParams = ( username! )
+        if username.characters.count < Config.Constant_Username_Length {
+            return try commonResponse(code: Errors.Code_UsernameInValid, message: Errors.Msg_UsernameInValid)
+        }
+        
+        if password.characters.count < Config.Constant_Password_Length {
+            return try commonResponse(code: Errors.Code_PasswordInValid, message: Errors.Msg_PasswordInValid)
+        }        
+        
+        let queryParams = ( username )
 
         let (users, _): ([User], QueryStatus) = try pool.execute { conn in
             try conn.query("SELECT id,account,password,salt,nickname FROM sg_user where account = ?", build(queryParams)) as ([User], QueryStatus)
@@ -94,7 +101,7 @@ extension UserController {
         for user in users {
             let md5Password = user.password;
             let salt = user.salt
-            if md5Password == (password! + salt).md5() {
+            if md5Password == (password + salt).md5() {
                 finalUser = user
                 break;
             }
@@ -104,7 +111,7 @@ extension UserController {
             let responseData = ["userId": String(result.id)]
             return try commonResponse(responseData: responseData)
         } else {
-            return try commonResponse(code: Errors.Code_UserValid, message: Errors.Msg_UserValid)
+            return try commonResponse(code: Errors.Code_UserInValid, message: Errors.Msg_UserInValid)
         }
     }
 
