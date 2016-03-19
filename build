@@ -2,4 +2,6 @@
 
 echo "Building..."
 
-swift build -Xlinker -L/usr/local/lib -Xcc -I/usr/local/include/mysql -v
+swift build -Xlinker -L/usr/local/lib -Xcc -I/usr/local/include/mysql -v -X
+
+# swift build -Xlinker -L/usr/local/lib -Xcc -I/usr/local/include/mysql -v -X -- generate Xcode Project

@@ -84,6 +84,8 @@ In the source folder, we write some shell script to help `build`, `clean`, `run`
 - [x] make a new Xcode Cocoa Application, Support using the GUI to run the server on osx
 - [x] make a fix shell to prefix the build problems
 - [ ] Error Constants
+- [ ] Change the database to [PostgreSQL](http://www.postgresql.org)
+- [ ] Change the XcodeProject generate by the command ```swift build -X```
 
 ## Feature
 
@@ -97,3 +99,13 @@ In the source folder, we write some shell script to help `build`, `clean`, `run`
 - [ ] ArticleInfo
 - [ ] Detail
 - [ ] NewArticle
+
+## Problem
+
+When use the `DEVELOPMENT-SNAPSHOT-2016-03-16-a` version, it seems that spm not support run swift build in terminal, so run below shell code to fix the problem.
+
+```sh
+sudo install_name_tool -add_rpath /Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-03-16-a.xctoolchain/usr/lib/swift/macosx /Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-03-16-a.xctoolchain/usr/bin/swift-build
+```
+
+But when I lanch the Xcode it always tell me `Failed to verify signature!`, so now the `DEVELOPMENT-SNAPSHOT-2016-03-16-a` version is a Bridge.

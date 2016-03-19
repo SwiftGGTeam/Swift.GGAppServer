@@ -2,3 +2,4 @@
 
 rm -rf Packages
 rm -rf .build
+rm -rf SwiftGGAppServer.xcodeproj
