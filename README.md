@@ -89,6 +89,7 @@ In the source folder, we write some shell script to help `build`, `clean`, `run`
 - [ ] change the database to [PostgreSQL](http://www.postgresql.org)
 - [ ] change the XcodeProject generate by the command ```swift build -X```
 - [ ] all the http request and response will be encrypt by AES or DES
+- [ ] new [SPM](https://github.com/CoderAFI/SPM) powerful tool
 
 ## Feature
 
