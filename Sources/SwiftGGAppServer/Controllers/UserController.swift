@@ -11,6 +11,7 @@ import MySQL
 import CryptoSwift
 import SwiftyJSON
 import Regex
+import Foundation
 
 class UserController : Controller {
 
@@ -94,11 +95,28 @@ class UserController : Controller {
 extension UserController {
     
     func register(username: String, _ password: String) throws -> ResponseConvertible {
-        //判断用户是否已经存在
-        //想数据库插入用户
-        let user = User(id: 0, username: "CoderAFI", password: "swiftgg123", salt: "3wfr2dsf", nickname: "CoderAFI")
+        
+        let queryParams = ( username )
+        
+        let (users, _): ([User], QueryStatus) = try pool.execute { conn in
+            try conn.query("SELECT id, account, password, salt, nickname, score, created_time, updated_time FROM sg_user where account = ?", build(queryParams)) as ([User], QueryStatus)
+        }
+        
+        if users.count > 0 {
+            return try commonResponse(code: Errors.Code_UserExist, message: Errors.Msg_UserExist)
+        }
+    
+        let nickname = "SwiftGG粉丝:\(username)"
+        let score = Random.randomIntWithMax(100)
+        let salt = Random.randomStringWithLength(6)
+        let encryptPass = (password + salt).md5()
+        
+        let newDateTime = Int(Date().timeIntervalSince1970)
+
+        let user = User(id: 0, username: username, password: encryptPass, salt: salt, nickname: nickname, score: score, createTime: newDateTime, updateTime: newDateTime)
+        
         let queryStatus = try pool.execute {conn in
-            try conn.query("INSERT INTO users SET ?", [user]) as QueryStatus
+            try conn.query("INSERT INTO sg_user SET ?", [user]) as QueryStatus
         }
         let newId = queryStatus.insertedId
         
@@ -109,9 +127,8 @@ extension UserController {
         let queryParams = ( username )
         
         let (users, _): ([User], QueryStatus) = try pool.execute { conn in
-            try conn.query("SELECT id,account,password,salt,nickname FROM sg_user where account = ?", build(queryParams)) as ([User], QueryStatus)
+            try conn.query("SELECT id, account, password, salt, nickname, score, created_time, updated_time FROM sg_user where account = ?", build(queryParams)) as ([User], QueryStatus)
         }
-        
         
         var finalUser: User?
         

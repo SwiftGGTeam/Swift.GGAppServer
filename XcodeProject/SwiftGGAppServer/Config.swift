@@ -8,7 +8,7 @@
 
 struct Config {
     
-    static let Constant_Username_Length = 10
-    static let Constant_Password_Length = 10
+    static let Constant_Username_Length = 3
+    static let Constant_Password_Length = 3
     
 }

@@ -85,7 +85,8 @@ In the source folder, we write some shell script to help `build`, `clean`, `run`
 - [x] make a fix shell to prefix the build problems
 - [x] Error Constants
 - [x] add regular expression support,[Regex](https://github.com/crossroadlabs/Regex.git)
-- [ ] generate the radom number util
+- [x] generate the radom number util
+- [ ] add dao layer 
 - [ ] change the database to [PostgreSQL](http://www.postgresql.org)
 - [ ] change the XcodeProject generate by the command ```swift build -X```
 - [ ] all the http request and response will be encrypt by AES or DES

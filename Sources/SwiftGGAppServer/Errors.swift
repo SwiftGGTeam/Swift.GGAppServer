@@ -25,5 +25,8 @@ struct Errors {
     
     static let Code_UsernameInvalid = -10004
     static let Msg_UsernameInvalid = "用户格式不正确"
+    
+    static let Code_UserExist = -10005
+    static let Msg_UserExist = "账号已被注册,请重新输入或找回密码"
 
 }
