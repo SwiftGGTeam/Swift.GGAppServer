@@ -71,26 +71,21 @@ class UserController : Controller {
 
     }
 
-    func otherLoginV1(request: Request) throws -> ResponseConvertible {
-        return ""
-    }
-
     func getInfoV1(request: Request) throws -> ResponseConvertible {
-
+        
         let (rows, _): ([User], QueryStatus) = try pool.execute { conn in
             try conn.query("SELECT id,account,password,nickname FROM sg_user;") as ([User], QueryStatus)
         }
-
+        
         print(rows)
-
+        
         let result = try rows.map { try Json(["username": $0.username]) }
         print(result)
-
+        
         return Json(result)
     }
 
 }
-
 
 extension UserController {
     

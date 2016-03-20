@@ -12,6 +12,7 @@
 		DD644DB51C9E480A009C218A /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD644DB41C9E480A009C218A /* Random.swift */; };
 		DD644DB71C9E5590009C218A /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD644DB61C9E5590009C218A /* Date.swift */; };
 		DD644DB91C9E6496009C218A /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD644DB81C9E6496009C218A /* Constant.swift */; };
+		DD644DBC1C9E6521009C218A /* UserDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD644DBB1C9E6521009C218A /* UserDao.swift */; };
 		DD7D57B11C9AA4E800769DF3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7D57B01C9AA4E800769DF3 /* AppDelegate.swift */; };
 		DD7D57B31C9AA4E800769DF3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7D57B21C9AA4E800769DF3 /* ViewController.swift */; };
 		DD7D57B51C9AA4E800769DF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD7D57B41C9AA4E800769DF3 /* Assets.xcassets */; };
@@ -35,6 +36,7 @@
 		DD644DB41C9E480A009C218A /* Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Random.swift; sourceTree = "<group>"; };
 		DD644DB61C9E5590009C218A /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		DD644DB81C9E6496009C218A /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constant.swift; path = ../../Sources/SwiftGGAppServer/Constant.swift; sourceTree = "<group>"; };
+		DD644DBB1C9E6521009C218A /* UserDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDao.swift; sourceTree = "<group>"; };
 		DD7D57AD1C9AA4E800769DF3 /* SwiftGGAppServer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftGGAppServer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD7D57B01C9AA4E800769DF3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DD7D57B21C9AA4E800769DF3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +82,15 @@
 			path = ../../Sources/SwiftGGAppServer/Tools;
 			sourceTree = "<group>";
 		};
+		DD644DBA1C9E650B009C218A /* Dao */ = {
+			isa = PBXGroup;
+			children = (
+				DD644DBB1C9E6521009C218A /* UserDao.swift */,
+			);
+			name = Dao;
+			path = ../../Sources/SwiftGGAppServer/Dao;
+			sourceTree = "<group>";
+		};
 		DD7D57A41C9AA4E700769DF3 = {
 			isa = PBXGroup;
 			children = (
@@ -106,8 +117,9 @@
 				DDCB18A51C9BC7C400A993F4 /* Errors.swift */,
 				DD7D57D01C9AABE800769DF3 /* Assets */,
 				DD7D57C31C9AA5A000769DF3 /* Controllers */,
-				DD7D57C71C9AA5A000769DF3 /* Middleware */,
+				DD644DBA1C9E650B009C218A /* Dao */,
 				DD7D57C91C9AA5A000769DF3 /* Models */,
+				DD7D57C71C9AA5A000769DF3 /* Middleware */,
 				DD644DB31C9E464C009C218A /* Tools */,
 				DD7D57D11C9AAC0E00769DF3 /* Dependencies */,
 			);
@@ -239,6 +251,7 @@
 				DD7D57CB1C9AA5A000769DF3 /* ArticleController.swift in Sources */,
 				DD7D57B31C9AA4E800769DF3 /* ViewController.swift in Sources */,
 				DD7D57CE1C9AA5A000769DF3 /* LogMiddleware.swift in Sources */,
+				DD644DBC1C9E6521009C218A /* UserDao.swift in Sources */,
 				DD7D57CD1C9AA5A000769DF3 /* UserController.swift in Sources */,
 				DDCE8E1C1C9AAF4E000B8DA9 /* SwiftGGAppServer.swift in Sources */,
 				DD7D57B11C9AA4E800769DF3 /* AppDelegate.swift in Sources */,
