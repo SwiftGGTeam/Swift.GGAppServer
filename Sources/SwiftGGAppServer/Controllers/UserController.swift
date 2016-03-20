@@ -73,16 +73,24 @@ class UserController : Controller {
 
     func getInfoV1(request: Request) throws -> ResponseConvertible {
         
-        let (rows, _): ([User], QueryStatus) = try pool.execute { conn in
-            try conn.query("SELECT id,account,password,nickname FROM sg_user;") as ([User], QueryStatus)
+        let optionalUserId = request.data.query["userid"]
+        guard let userid = optionalUserId else {
+            return try commonResponse(code: Errors.Code_ParameterInvalid, message: Errors.Msg_ParameterInvalid)
         }
         
-        print(rows)
+        let queryParams = (userid)
         
-        let result = try rows.map { try Json(["username": $0.username]) }
-        print(result)
+        let (users, _) = try pool.execute { conn in
+            try conn.query("select id, account, password, salt, nickname, score, created_time, updated_time from sg_user where id = ?", build(queryParams)) as ([User], QueryStatus)
+        }
         
-        return Json(result)
+        if users.count == 1 {
+            let user = users[0]
+            let userDict = ["uid":user.id, "username": user.username, "nickname": user.nickname, "score": user.score]
+            return try commonResponse(responseData: userDict)
+        } else {
+            return try commonResponse(code: Errors.Code_UserInValid, message: Errors.Msg_UserInValid)
+        }
     }
 
 }
@@ -94,7 +102,7 @@ extension UserController {
         let queryParams = ( username )
         
         let (users, _): ([User], QueryStatus) = try pool.execute { conn in
-            try conn.query("SELECT id, account, password, salt, nickname, score, created_time, updated_time FROM sg_user where account = ?", build(queryParams)) as ([User], QueryStatus)
+            try conn.query("select id, account, password, salt, nickname, score, created_time, updated_time from sg_user where account = ?", build(queryParams)) as ([User], QueryStatus)
         }
         
         if users.count > 0 {
@@ -122,7 +130,7 @@ extension UserController {
         let queryParams = ( username )
         
         let (users, _): ([User], QueryStatus) = try pool.execute { conn in
-            try conn.query("SELECT id, account, password, salt, nickname, score, created_time, updated_time FROM sg_user where account = ?", build(queryParams)) as ([User], QueryStatus)
+            try conn.query("select id, account, password, salt, nickname, score, created_time, updated_time from sg_user where account = ?", build(queryParams)) as ([User], QueryStatus)
         }
         
         var finalUser: User?

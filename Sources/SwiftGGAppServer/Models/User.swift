@@ -31,7 +31,6 @@ struct User : QueryRowResultType, QueryParameterDictionaryType {
     }
     
     func queryParameter() throws -> QueryDictionary {
-
         return QueryDictionary(["account": username, "password": password, "nickname": nickname, "salt": salt, "score": score, "created_time": createTime, "updated_time": updateTime])
     }
     

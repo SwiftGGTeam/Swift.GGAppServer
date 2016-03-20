@@ -87,6 +87,7 @@ In the source folder, we write some shell script to help `build`, `clean`, `run`
 - [x] add regular expression support,[Regex](https://github.com/crossroadlabs/Regex.git)
 - [x] generate the radom number util
 - [ ] add dao layer
+- [ ] add quick way to transform model(DTO) to json
 - [ ] change the database to [PostgreSQL](http://www.postgresql.org)
 - [ ] change the XcodeProject generate by the command ```swift build -X```
 - [ ] all the http request and response will be encrypt by AES or DES
@@ -97,7 +98,7 @@ In the source folder, we write some shell script to help `build`, `clean`, `run`
 ### User
 - [x] Login
 - [x] Register
-- [ ] Info
+- [x] Info
 - [ ] login and registe use mobile and captcha, and return the token with expire time
 
 ### Article
