@@ -157,11 +157,11 @@ extension UserController {
         }
         
         // 判断长度
-        if username.characters.count < Config.Constant_Username_Length {
+        if username.characters.count < Constant.Constant_Username_Length {
             return (false, Errors.Code_UsernameLengthInValid, Errors.Msg_UsernameLengthInValid)
         }
         
-        if password.characters.count < Config.Constant_Password_Length {
+        if password.characters.count < Constant.Constant_Password_Length {
             return (false, Errors.Code_PasswordLengthInValid, Errors.Msg_PasswordLengthInValid)
         }
         
