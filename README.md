@@ -90,7 +90,7 @@ In the source folder, we write some shell script to help `build`, `clean`, `run`
 - [ ] add dao layer
 - [ ] add quick way to transform model(DTO) to json
 - [ ] change the database to [PostgreSQL](http://www.postgresql.org)
-- [ ] fix build error with swift development version ``
+- [ ] fix build error with swift development version `DEVELOPMENT-SNAPSHOT-2016-03-16-a`, because new feature of `Swift3`, the SwitJSON can't build successfully.
 - [ ] change the XcodeProject generate by the command ```swift build -X```
 - [ ] all the http request and response will be encrypt by AES or DES
 - [ ] new [SPM](https://github.com/CoderAFI/SPM) powerful tool, so i think will use the WatchDog
