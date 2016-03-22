@@ -8,11 +8,7 @@
 
 import Vapor
 
-class ArticleController : Controller {
-    
-    required init() {
-        
-    }
+class ArticleController: BaseController {
     
     func getCategoryListV1(request: Request) throws -> ResponseConvertible {
         return ""

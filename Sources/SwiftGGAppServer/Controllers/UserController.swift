@@ -13,7 +13,7 @@ import SwiftyJSON
 import Regex
 import Foundation
 
-class UserController : Controller {
+class UserController: BaseController {
 
     struct Options: ConnectionOption {
         let host: String
@@ -27,10 +27,6 @@ class UserController : Controller {
         let options = Options(host: "123.57.250.194", port: 3306, user: "swiftggapp", password: "SwiftGG123", database: "swiftggapp")
         return ConnectionPool(options: options)
     }()
-
-    required init() {
-
-    }
 
     func registerV1(request: Request) throws -> ResponseConvertible {
         

@@ -69,6 +69,7 @@ Now, Launch Xcode, run the blow shell in terminal to start Xcode with the new ve
 
 ```sh
 xcrun launch-with-toolchain /Library/Developer/Toolchains/swift-latest.xctoolchain
+xcrun --toolchain /Library/Developer/Toolchains/swift-latest.xctoolchain
 ```
 
 Next, see the source code, you will find a folder named **XcodeProject**, go in and double click the SwiftGGAppServer.xcodeproj to launch Xcode and now `cmd+r`, when it build success, everything is OK !
@@ -89,6 +90,7 @@ In the source folder, we write some shell script to help `build`, `clean`, `run`
 - [ ] add dao layer
 - [ ] add quick way to transform model(DTO) to json
 - [ ] change the database to [PostgreSQL](http://www.postgresql.org)
+- [ ] fix build error with swift development version ``
 - [ ] change the XcodeProject generate by the command ```swift build -X```
 - [ ] all the http request and response will be encrypt by AES or DES
 - [ ] new [SPM](https://github.com/CoderAFI/SPM) powerful tool, so i think will use the WatchDog
@@ -106,6 +108,9 @@ In the source folder, we write some shell script to help `build`, `clean`, `run`
 - [ ] ArticleInfo
 - [ ] Detail
 - [ ] NewArticle
+
+## Compatible
+- [x] Support Vapor0.3 in 2016.3.22, Vapor change the `Controller` to `ResourceController` and add default behavior.
 
 ## Problem
 

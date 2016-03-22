@@ -8,11 +8,7 @@
 
 import Vapor
 
-class CatchController : Controller {
-    
-    required init() {
-        
-    }
+class CatchController : BaseController {
     
     func addNewArticle(request: Request) throws -> ResponseConvertible {
         return ""

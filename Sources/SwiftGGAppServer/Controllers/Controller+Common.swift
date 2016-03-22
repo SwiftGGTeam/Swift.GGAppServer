@@ -9,7 +9,7 @@
 import Vapor
 import SwiftyJSON
 
-extension Controller {
+extension ResourceController {
 
     func commonResponse(code theCode: Int = Errors.Code_Success, message: String = Errors.Msg_Success, responseData: AnyObject? = nil) throws -> ResponseConvertible {
         var resultData = try JSON(["code": theCode, "message": message, "data": ""]).rawData().arrayOfBytes()
