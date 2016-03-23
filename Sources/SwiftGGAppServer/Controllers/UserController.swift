@@ -11,25 +11,11 @@ import MySQL
 import CryptoSwift
 import SwiftyJSON
 import Regex
-import Foundation
 
 class UserController: BaseController {
 
-    struct Options: ConnectionOption {
-        let host: String
-        let port: Int
-        let user: String
-        let password: String
-        let database: String
-    }
-
-    private let pool:ConnectionPool = {
-        let options = Options(host: "localhost", port: 3306, user: "root", password: "root", database: "swiftgg")
-        return ConnectionPool(options: options)
-    }()
-
     func registerV1(request: Request) throws -> ResponseConvertible {
-
+        
         let query = request.data.query
         let optionalUsername = query["username"]
         let optionalPassword = query["password"]
@@ -45,10 +31,11 @@ class UserController: BaseController {
         } else {
             return try register(username, password)
         }
+        
     }
 
     func loginV1(request: Request) throws -> ResponseConvertible {
-
+        
         let params = request.data.query
         let optionalUsername = params["username"]
         let optionalPassword = params["password"]
@@ -87,6 +74,7 @@ class UserController: BaseController {
         } else {
             return try commonResponse(code: Errors.Code_UserInValid, message: Errors.Msg_UserInValid)
         }
+        
     }
 
 }
@@ -94,7 +82,7 @@ class UserController: BaseController {
 extension UserController {
 
     func register(username: String, _ password: String) throws -> ResponseConvertible {
-
+        
         let queryParams = ( username )
 
         let (users, _): ([User], QueryStatus) = try pool.execute { conn in
@@ -120,9 +108,11 @@ extension UserController {
         let newId = queryStatus.insertedId
 
         return try commonResponse(responseData: ["userId": newId])
+        
     }
 
     func login(username: String, _ password: String) throws -> ResponseConvertible {
+        
         let queryParams = ( username )
 
         let (users, _): ([User], QueryStatus) = try pool.execute { conn in
@@ -145,10 +135,11 @@ extension UserController {
         } else {
             return try commonResponse(code: Errors.Code_UserInValid, message: Errors.Msg_UserInValid)
         }
+        
     }
 
     func verify(username: String, _ password: String) throws -> (Bool, Int, String) {
-
+        
         //用户名验证（允许使用小写字母、数字、下滑线、横杠，一共3~16个字符）
         // 判断是否含有特殊字符
         if username !~ "^[a-z0-9_-]{3,16}$" {
@@ -165,5 +156,6 @@ extension UserController {
         }
 
         return (true, Errors.Code_Success, Errors.Msg_Success)
+        
     }
 }

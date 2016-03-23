@@ -7,8 +7,24 @@
 //
 
 import Vapor
+import MySQL
 
 class BaseController: ResourceController, DefaultInitializable {
+    
+    struct Options: ConnectionOption {
+        let host: String
+        let port: Int
+        let user: String
+        let password: String
+        let database: String
+    }
+    
+    let pool:ConnectionPool = {
+        
+        let options = Options(host: "localhost", port: 3306, user: "root", password: "root", database: "swiftgg")
+        return ConnectionPool(options: options)
+        
+    }()
     
     required init() {
         
