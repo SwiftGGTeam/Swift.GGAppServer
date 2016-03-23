@@ -70,6 +70,9 @@ xcrun launch-with-toolchain /Library/Developer/Toolchains/swift-latest.xctoolcha
 ```
 </s>
 
+Because Xcode7.3 release, you can choose Swift SDK version at `Xcode->Preference->Components`.
+
+![Xcode_Select_Swift_Version](xcode_select_swift_version.png)
 
 Next, see the source code, you will find a folder named **XcodeProject**, go in and double click the SwiftGGAppServer.xcodeproj to launch Xcode and now `cmd+r`, when it build success, everything is OK !
 
