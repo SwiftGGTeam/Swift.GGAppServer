@@ -62,13 +62,14 @@ cd yourcodefolder
 .build/debug/SwiftGGAppServer
 ```
 
-<s>7.Xcode Support
+7.Xcode Support
 
-~~Now, Launch Xcode, run the blow shell in terminal to start Xcode with the new version of swift.~~
+~~Now, Launch Xcode, run the blow shell in terminal to start Xcode with the new version of swift.
 
 ```sh
 xcrun launch-with-toolchain /Library/Developer/Toolchains/swift-latest.xctoolchain
 ```
+~~
 
 Next, see the source code, you will find a folder named **XcodeProject**, go in and double click the SwiftGGAppServer.xcodeproj to launch Xcode and now `cmd+r`, when it build success, everything is OK !
 
