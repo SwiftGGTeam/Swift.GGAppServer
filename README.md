@@ -28,6 +28,15 @@ Sometime the config in OSX and Linux are a bit different, so we will **Seperate*
 brew install mysql
 ```
 
+Now,The version is `v5.7.11`, but unfortunately, the mysql header files has some issue when Xcode to build and link, so we need modify them by hand.
+
+```sh
+cd /usr/local/include/mysql
+```
+
+- find `client_plugin.h` at line `103` replace the include with ```#include "plugin_auth_common.h"```.
+- find `my_alloc.h` at line `27` replace the include code with ```#include "mysql/psi/psi_memory.h"```.
+
 3.Clone Codes
 
 ```sh
@@ -53,23 +62,12 @@ cd yourcodefolder
 .build/debug/SwiftGGAppServer
 ```
 
-7.Xcode Support
+<s>7.Xcode Support
 
-Unfortunately, the mysql header file has some issue when Xcode to build and link, so now we modify it by hand.
-
-```sh
-cd /usr/local/include/mysql
-```
-
-find `client_plugin.h` at line `103` replace the include with ```#include "plugin_auth_common.h"```.
-
-find `my_alloc.h` at line `27` replace the include code with ```#include "mysql/psi/psi_memory.h"```.
-
-Now, Launch Xcode, run the blow shell in terminal to start Xcode with the new version of swift.
+~~Now, Launch Xcode, run the blow shell in terminal to start Xcode with the new version of swift.~~
 
 ```sh
 xcrun launch-with-toolchain /Library/Developer/Toolchains/swift-latest.xctoolchain
-xcrun --toolchain /Library/Developer/Toolchains/swift-latest.xctoolchain
 ```
 
 Next, see the source code, you will find a folder named **XcodeProject**, go in and double click the SwiftGGAppServer.xcodeproj to launch Xcode and now `cmd+r`, when it build success, everything is OK !
