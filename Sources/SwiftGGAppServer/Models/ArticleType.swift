@@ -12,12 +12,12 @@ struct ArticleType: QueryRowResultType, QueryParameterDictionaryType {
     
     let id: Int
     let typeName: String
-    let coverUrl: String?
+    var coverUrl: String = ""
     
     static func decodeRow(r: QueryRowResult) throws -> ArticleType {
         return try ArticleType(id: r <| 0,
                         typeName: r <| "name",
-                        coverUrl: r <|? "cover_url")
+                        coverUrl: r <| "cover_url")
     }
     
     func queryParameter() throws -> QueryDictionary {

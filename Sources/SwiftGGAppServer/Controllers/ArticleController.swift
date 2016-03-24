@@ -14,27 +14,53 @@ class ArticleController: BaseController {
     
     func getCategoryListV1(request: Request) throws -> ResponseConvertible {
         
-//        SELECT * FROM sg_type LEFT JOIN (SELECT `type_id`,count(*) AS sum FROM sg_article_type group BY `type_id`) b ON sg_type.`id`=b.`type_id` ORDER BY `sum` DESC
+        let types = try getArticleCategoryies()
+        let typeDictArr = types.map { ["id": $0.id, "typeName": $0.typeName, "coverUrl": $0.coverUrl] }
+        return try commonResponse(code: Errors.Code_Success, message: Errors.Msg_Success, responseData: typeDictArr)
+
+    }
+    
+    func getArticlesByCategoryV1(request: Request) throws -> ResponseConvertible {
         
-        "select id, name, cover_url from sg_type left join (select type_id, count(*) as sum from sg_article_type group by type_id) t on sg_type.id = t.type_id order by sum desc"
+        let optionalCategoryId = request.data.query["categoryId"]
         
+        guard let categoryId = optionalCategoryId else {
+            return try commonResponse(code: Errors.Code_ParameterInvalid, message: Errors.Msg_ParameterInvalid)
+        }
+        
+        let articles = try getArticles()
+        let articlesDictArr = articles.filter {
+            if let realTypeId = $0.typeId {
+                return realTypeId == categoryId
+            }
+            return false
+        }.map {
+            ["id": $0.id, "tag": $0.tag, "title": $0.title, "cover_url": $0.coverUrl, "content_url": $0.contentUrl, "translator": $0.translator, "proofreader": $0.proofReader, "finalization": $0.finalization, "author": $0.author, "authorImage": $0.authorImage, "original_date": $0.originalDate, "original_url": $0.originalUrl, "permalink": $0.permalink, "startsNumber": $0.starsNumber, "clickedNumber": $0.clickedNumber]
+        }
+        return try commonResponse(code: Errors.Code_Success, message: Errors.Msg_Success, responseData: articlesDictArr)
+        
+    }
+    
+}
+
+extension ArticleController {
+    
+    func getArticles() throws -> [Article] {
+        
+        let (articles, _) = try pool.execute { conn in
+            try conn.query("select id, tag, title, cover_url, content_url, translator, proofreader, finalization, author, author_image, author_image, original_date, original_url, permalink, stars_number, clicked_number, t.type_id from sg_article left join (select article_id,type_id from sg_article_type) t on t.article_id = sg_article.id") as ([Article], QueryStatus)
+        }
+        return articles
+        
+    }
+    
+    func getArticleCategoryies() throws -> [ArticleType] {
+
         let (types, _) = try pool.execute { conn in
             try conn.query("select id, name, cover_url from sg_type") as ([ArticleType], QueryStatus)
         }
+        return types
         
-        var resultTypeArr = [JSON]()
-        
-        for type in types {
-            let typeDicts: JSON = ["id": type.id, "typeName": type.typeName, "coverUrl": type.coverUrl!]
-            resultTypeArr.append(typeDicts)
-        }
-        
-//        let result = ["":""]
-        return try commonResponse(code: Errors.Code_Success, message: Errors.Msg_Success, responseData: resultTypeArr)
-    }
-    
-    func getDetailV1(request: Request) throws -> ResponseConvertible {
-        return ""
     }
     
 }

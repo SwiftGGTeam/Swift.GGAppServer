@@ -21,7 +21,7 @@ class BaseController: ResourceController, DefaultInitializable {
     
     let pool:ConnectionPool = {
         
-        let options = Options(host: "localhost", port: 3306, user: "root", password: "root", database: "swiftgg")
+        let options = Options(host: "123.57.250.194", port: 3306, user: "swiftggapp", password: "SwiftGG123", database: "swiftggapp")
         return ConnectionPool(options: options)
         
     }()
