@@ -106,13 +106,12 @@ In the source folder, we write some shell script to help `build`, `clean`, `run`
 - [ ] login and registe use mobile and captcha, and return the token with expire time
 
 ### Article
-- [ ] CategoryList
-- [ ] ArticleInfo
-- [ ] Detail
+- [x] CategoryList
+- [x] ArticleInfo
 - [ ] NewArticle
 
 ## Compatible
-- [x] Support Vapor0.3 in 2016.3.22, Vapor change the `Controller` to `ResourceController` and add default behavior.
+- [x] Support Vapor v0.3 in 2016.3.22, Vapor change the `Controller` to `ResourceController` and add default behavior.
 
 ## Problem
 
