@@ -89,6 +89,7 @@ In the source folder, we write some shell script to help `build`, `clean`, `run`
 - [x] Error Constants
 - [x] add regular expression support,[Regex](https://github.com/crossroadlabs/Regex.git)
 - [x] generate the radom number util
+- [ ] because the depndency libraries are update so frequently and support different version of swift, so in next step i will remove them and contains their codes, the less depdency the less complie error.
 - [ ] design a logo
 - [ ] add dao layer
 - [ ] make ORM framework
@@ -125,6 +126,10 @@ sudo install_name_tool -add_rpath /Library/Developer/Toolchains/swift-DEVELOPMEN
 ```
 
 But when I lanch the Xcode it always tell me `Failed to verify signature!`, so now the `DEVELOPMENT-SNAPSHOT-2016-03-16-a` version is a Bridge.
+
+## Follow
+- [Swift bugs](https://bugs.swift.org/projects/SR/issues/SR-685?filter=allopenissues)
+- [Swift CI ](https://ci.swift.org)
 
 ## License
 Swift.GGAppServer is released under the MIT license.
