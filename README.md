@@ -91,6 +91,7 @@ In the source folder, we write some shell script to help `build`, `clean`, `run`
 - [x] generate the radom number util
 - [ ] design a logo
 - [ ] add dao layer
+- [ ] make ORM framework
 - [ ] add quick way to transform model(DTO) to json
 - [ ] change the database to [PostgreSQL](http://www.postgresql.org)
 - [ ] fix build error with swift development version `DEVELOPMENT-SNAPSHOT-2016-03-16-a`, because new feature of `Swift3`, the SwitJSON can't build successfully.
